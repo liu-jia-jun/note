@@ -1098,13 +1098,25 @@ SqlSession session = factory.openSession();
 
 ![获取SqlSession对象](imgs/image-20220204204610280.png)
 
-#### 3.
+#### 3.使用SqlSession获取映射器
 
+```java
+SqlSession sqlSession = factory.openSession();
+try{
+	EmployeeMapper mapper = sqlSession.getMapper(EmployeeMapper.class);
+}finally{
+    sqlSession.close();
+}
+```
 
+#### 4.使用映射器调用mapper中的方法
 
+```
+Employee employee = mapper.getEmpById(1);
 
+```
 
-### mybatis原理总结
+#### mybatis原理总结
 
 >```java
 >/**
