@@ -1090,7 +1090,7 @@ SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(inputStream);
 
 #### 2.获取SqlSession对象
 
-```
+```java
 SqlSession session = factory.openSession();
 ```
 
