@@ -1166,7 +1166,9 @@ Employee employee = mapper.getEmpById(1);
 
 ### 1. 什么是mybatis
 
+> mybatis是一款持久层框架，属于半ORM（对象关系映射）框架，mybatis支持定制sql，存储过程，高级映射，
 
+### 2.ORM是什么
 
-
+>ORM（object relational Mapping）对象关系映射，
 
