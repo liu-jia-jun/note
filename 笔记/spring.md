@@ -54,3 +54,19 @@ public void testUser(){
 >    1. BeanFactory：IOC容器的基本实现，是Spring框架内部使用的接口，不向外提供使用，**该方式属于懒加载模式，加载配置文件时不会创建对象，只有在获取对象时才会去创建对象**
 >    2. ApplicationContext：该接口是BeanFactory接口的子接口，有更多更强大的功能，提供给开发人员使用，**使用该接口在加载配置文件时会创建配置文件中所有的对象，用于web开发阶段（提前将对象创建，节省时间，更好的用户体验）**
 
+### ioc操作Bean
+
+####  创建Bean
+
++ 基于XML方式创建对象
+
+  ```
+  // 配置User对象
+  <bean id="user" class="com.spring.pojo.User"></bean>
+  在Spring配置文件中，使用bean标签，标签中添加相应的属性就可以s
+  ```
+
+  
+
+#### 注入属性值
+
