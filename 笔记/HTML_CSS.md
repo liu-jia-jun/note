@@ -222,7 +222,7 @@
 >  ```
 > <div style="color:red; font-size:16px;"></div>
 ><div style="color:red; font-size:18px">内嵌式</div>
->+ 
+>+
 >
 >````
 >```
@@ -275,7 +275,7 @@
 >   .类名 {
 >   	样式;
 >   }
->             
+>               
 >   eg:
 >   .demo1 {
 >   	样式;
@@ -283,7 +283,7 @@
 >   .demo2 {
 >   	样式;
 >   }
->             
+>               
 >   <div class="demo1 demo2" >类选择器通过类名选择元素</div>
 >   ```
 >
@@ -295,12 +295,12 @@
 >   #id名 {
 >   	样式;
 >   }
->             
+>               
 >   eg:
 >   #demo {
 >   	样式;
 >   }
->             
+>               
 >   <div id="demo" >id选择器通过id名选择元素</div>
 >   ```
 >

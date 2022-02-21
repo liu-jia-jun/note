@@ -41,9 +41,11 @@ public void testUser(){
 
 ## IOC
 
-### ioc过程
+### iocr过程
 
+**IOC通过xml配置文件创建对象的过程**
 
+1. 先通过bean.xml获取配置信息，之后通过工厂模式和反射机制创建对象
 
 ![](imgs/IOC.png)
 
@@ -66,7 +68,7 @@ public void testUser(){
   在Spring配置文件中，使用bean标签，标签中添加相应的属性就可以s
   ```
 
-  
+  **创建对象时默认执行的是无参构造new出的对象
 
 #### 注入属性值
 
