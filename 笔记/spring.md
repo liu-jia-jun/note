@@ -1,4 +1,4 @@
-# Spring
+# Spring5
 
 > spring  是一个全面的企业应用开发一站式的解决方案
 
@@ -56,7 +56,7 @@ public void testUser(){
 >    1. BeanFactory：IOC容器的基本实现，是Spring框架内部使用的接口，不向外提供使用，**该方式属于懒加载模式，加载配置文件时不会创建对象，只有在获取对象时才会去创建对象**
 >    2. ApplicationContext：该接口是BeanFactory接口的子接口，有更多更强大的功能，提供给开发人员使用，**使用该接口在加载配置文件时会创建配置文件中所有的对象，用于web开发阶段（提前将对象创建，节省时间，更好的用户体验）**
 
-### IOC操作Bean
+### IOC操作Bean（基于XML）
 
 ####  创建Bean
 
@@ -236,10 +236,10 @@ public class Orders {
 <bean id="stu" class="com.atguigu.spring5.collectiontype.Stu">
 	 <!--数组类型属性注入-->
  	<property name="courses">
- 		<array>
+ 		<data_structure.array>
  			<value>java 课程</value>
  			<value>数据库课程</value>
- 		</array>
+ 		</data_structure.array>
  	</property>
     
  <!--2. list 类型属性注入-->
@@ -291,7 +291,226 @@ public class Orders {
 
 ```
 
+
+
+#### 基于XML的自动装配
+
+> 自动装配：Spring 根据对象类型或者实例对象的名称，自动的进行依赖注入，无需在创建Bean时在Bean标签中添加property标签来赋予属性值
+
+**类型注入与名称注入**
+
+ ```xml
+ <!-- 因为这里使用了autowire自动装配所以不需要使用property来手动赋值，这里spring会创建配置文件中所有的对象，之后通过名称或者类型自动的进行依赖注入-->
+ 
+ <!--实现自动装配
+  bean 标签属性 autowire，配置自动装配
+  autowire 属性常用两个值：
+  byName 根据属性名称注入 ，注入值 bean 的 id 值和类属性名称一样
+  byType 根据属性类型注入
+ -->
+ <!--注意：emp对象中含有类型为dept的属性，且属性名为dept-->
+ 
+ <!--通过名称注入-->
+ <bean id="emp" class="com.atguigu.spring5.autowire.Emp" autowire="byName"> 
+  <!--<property name="dept" ref="dept"></property> -->
+ </bean> 
+ 
+ <bean id="dept" class="com.atguigu.spring5.autowire.Dept"></bean>
+ 
+ 
+ <!--通过类型注入-->
+ <bean id="emp" class="com.atguigu.spring5.autowire.Emp" autowire="byType">
+  <!--<property name="dept" ref="dept"></property>-->
+ </bean>
+ <bean id="dept" class="com.atguigu.spring5.autowire.Dept"></bean>
+ ```
+
+**注意：当我们使用类型注入时，但是需要注入的对象（dept）有多个对象实例，此时是不能注入的，Spring无法分辨注入哪个对象实例，此时我们需要使用名称注入**
+
+
+
+
+
+### IOC操作Bean（基于注解）
+
+> 1、什么是注解 
+>
+> （1）注解是代码特殊标记，格式：@注解名称(属性名称=属性值, 属性名称=属性值..) 
+>
+> （2）使用注解，注解作用在类上面，方法上面，属性上面 
+>
+> （3）使用注解目的：简化 xml 配置
+
+####  1.Spring通过注解创建Bean
+
++ （1）@Component 创建普通对象实例
+
++ （2）@Controller    创建控制层对象实例
+
++ （3）@Service         创建服务层对象实例
+
++ （4）@Repository   创建持久层对象实例
+
+**这四个注解都是用于创建对象实例的写在类名上，功能一样，语义不同**
+
+1. 第一步加载spring的依赖中Aop的jar
+
+> 如果是maven项目,会自动导入相关的依赖,如果是普通java项目需要导入spring相关的jar包例如AOP
+
+
+
+2. 在配置文件中配置包扫描器
+
+```xml
+<!--开启组件扫描
+     1 如果扫描多个包，多个包使用逗号隔开
+     2 扫描包上层目录
+-->
+<context:component-scan base-package="com.atguigu"></context:component-scan>
+```
+
+
+
+3. 创建实体类，并在实体类中类名上添加创建对象的注解
+
+```java
+@Component(value = "userService") //注解操作相当于<bean id="userService" class=".."/>
+public class UserService {
+     public void add() {
+     System.out.println("service add.......");
+     }
+}
+
+```
+
+
+
+#### 2.组件扫描
+
+```xml
+<!--示例 1
+ use-default-filters="false" 表示现在不使用默认 filter，自己配置 filter
+ context:include-filter ，设置扫描哪些内容
+-->
+<context:component-scan base-package="com.atguigu" use-defaultfilters="false">
+ <context:include-filter type="annotation"
+
+expression="org.springframework.stereotype.Controller"/>
+</context:component-scan>
+<!--示例 2
+ 下面配置扫描包所有内容
+ context:exclude-filter： 设置哪些内容不进行扫描
+-->
+<context:component-scan base-package="com.atguigu">
+ <context:exclude-filter type="annotation"
+
+expression="org.springframework.stereotype.Controller"/>
+</context:component-scan>
+
+```
+
+#### 3.基于注解进行属性注入
+
+**1.@Autowired 根据类型进行属性注入**
+
+```java
+@ServiceRes
+public class UserService {
+     //定义 dao 类型属性
+     //不需要添加 set 方法
+     //添加注入属性注解
+     @Autowired
+     private UserDao userDao;
+    
+     public void add() {
+     System.out.println("service add.......");
+     userDao.add();
+     }
+}
+
+@Repository 
+class UserDao {
+     public void add() {
+     System.out.println("dao add.......");
+     }
+}
+
+
+
+```
+
+
+
+**2.@Qualifier 根据名称进行属性注入**
+
+```java
+//@Qualifier 注解的使用需要和@Autowired 一起使用
+// 如果在依赖注入时,存在多个注入对象(userDao),如果是根据类型注入Spring无法分辨注入哪个对象,此时就需要使用根据名称进行属性注入
+
+//两者一起使用,根据名称进行注入
+@Autowired 
+@Qualifier(value = "userDaoImpl1") 
+private UserDao userDao;
+
+```
+
+
+
+**3.@Resource：可以根据类型注入，可以根据名称注入**
+
+```java
+//@Resource //根据类型进行注入,没有name属性默认类型注入
+@Resource(name = "userDaoImpl1") //根据名称进行注入,有name属性则为名称注入
+private UserDao userDao;
+```
+
+
+
+**4@Value：注入普通类型属性**
+
+```java
+@Value(value = "abc")
+private String name;
+```
+
+
+
+#### 4.完全注解开发
+
+```java
+（1）创建配置类，替代 xml 配置文件
+@Configuration //作为配置类，替代 xml 配置文件
+@ComponentScan(basePackages = {"com.atguigu"})// k
+public class SpringConfig {
+    
+}
+
+（2）编写测试类
+@Test
+public void testService2() {
+     //加载配置类
+     ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+     UserService userService = context.getBean("userService",
+     UserService.class);
+     System.out.println(userService);
+     userService.add();
+}
+
+```
+
+
+
+
+
+
+
+
+
 ### Bean管理
+
+##### 1.spring中的普通Bean和工厂Bean
+
+
 
 1. Spring 有两种类型 bean，一种普通 bean，另外一种工厂 bean（FactoryBean）
 2. 普通 bean：在配置文件中定义 bean 类型就是返回类型
@@ -333,6 +552,40 @@ public void test3() {
 
 ```
 
+##### 2.在bean.xml中引入外部文件
+
+1. （1）创建外部属性文件，properties 格式文件，写数据库信息
+2. （2）把外部 properties 属性文件引入到 spring 配置文件中 * 引入 context 名称空间
+
+```xml
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xmlns:util="http://www.springframework.org/schema/util"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util.xsd
+ http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+```
+
+3. 在 spring 配置文件使用标签引入外部属性文件并通过**${}**的方式获取外部文件的值
+
+```xml
+<context:property-placeholder location="classpath:jdbc.properties"/>
+<!--配置连接池，创建数据连接池对象-->
+<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+     <property name="driverClassName" value="${mysql.driverClass}"></property>
+     <property name="url" value="${mysql.url}"></property>
+     <property name="username" value="${mysql.userName}"></property>
+     <property name="password" value="${mysql.password}"></property>
+</bean>
+```
+
+
+
 ### Bean的作用域
 
 > 这里的Bean的作用域指的是单例模式还是多例模式，即当程序需要多次访问莫格对象实例时，spring返回的是同一个bean，还是会重新创建一个bean并返回
@@ -358,6 +611,63 @@ public void test3() {
 > 1. 第一 singleton 单实例，prototype 多实例 
 > 2. 第二 设置 scope 值是 singleton 时候，加载 spring 配置文件时候就会创建单实例对象 设置 scope 值是 prototype 时候，不是在加载 spring 配置文件时候创建 对象，而是在调用 getBean 方法时候创建多实例对象
 
-### Bean的生命周期
+### Bean的生命周期(含后置处理器)
 
-所谓后置处理器其实是BeanPostProcessor的直译，前置和后置增强都是用BeanPostProcessor来实现的
+（1）通过构造器创建 bean 实例（无参数构造） 
+
+（2）为 bean 的属性设置值和对其他 bean 引用（调用 set 方法）
+
+（3）把 bean 实例传递 bean 后置处理器的方法 postProcessBeforeInitialization 
+
+（4）调用 bean 的初始化的方法（需要进行配置初始化的方法）
+
+（5）把 bean 实例传递 bean 后置处理器的方法 postProcessAfterInitialization 
+
+（6）bean 可以使用了（对象获取到了） 
+
+（7）当容器关闭时候，调用 bean 的销毁的方法（需要进行配置销毁的方法）
+
+> 所谓后置处理器其实是BeanPostProcessor的直译，前置和后置增强都是用BeanPostProcessor来实现的
+>
+> springboot中用到了beanPostProcessor，主要是用于当bean创建好并初始化后，传递给别的对象作为参数使用，可以在before或after方法中实现
+
+```java
+public class Orders {
+     //无参数构造
+     public Orders() {
+    	System.out.println("第一步 执行无参数构造创建 bean 实例");
+     }
+     private String oname;
+     public void setOname(String oname) {
+    	this.oname = oname;
+     	System.out.println("第二步 调用 set 方法设置属性值");
+     }
+     //创建执行的初始化的方法
+     public void initMethod() {
+     	System.out.println("第三步 执行初始化的方法");
+     }
+ 	//创建执行的销毁的方法
+     public void destroyMethod() {
+     	System.out.println("第五步 执行销毁的方法");
+     }
+}
+<bean id="orders" class="com.atguigu.spring5.bean.Orders" initmethod="initMethod" destroy-method="destroyMethod">
+ 	<property name="oname" value="手机"></property>
+</bean>
+    
+    
+ @Test
+ public void testBean3() {
+    // ApplicationContext context =
+    // new ClassPathXmlApplicationContext("bean4.xml");
+     ClassPathXmlApplicationContext context =
+     new ClassPathXmlApplicationContext("bean4.xml");
+     Orders orders = context.getBean("orders", Orders.class);
+     System.out.println("第四步 获取创建 bean 实例对象");
+     System.out.println(orders);
+     //手动让 bean 实例销毁
+ context.close();
+ }
+
+```
+
