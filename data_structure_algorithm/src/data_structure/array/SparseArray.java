@@ -16,6 +16,8 @@ public class SparseArray {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
 
+
+
         int[][] array=new int[8][10];//现在有一个存在较多单一数据的二维数组eg：数据0；
         array[1][2]=1;
         array[2][3]=2;
