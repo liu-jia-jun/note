@@ -7,7 +7,11 @@ package code;
  *
  */
 public class IsPalindrome {
+
+
     public boolean isPalindrome(int x) {
+
+
 
         String num = Integer.toString(x);
         if(x<0){
