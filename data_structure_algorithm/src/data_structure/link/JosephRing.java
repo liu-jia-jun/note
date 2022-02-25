@@ -2,8 +2,12 @@ package data_structure.link;
 
 /**
  * @author 刘佳俊
+ *
+ * 约瑟夫环问题
+ *
+ *
  */
-public class A {
+public class JosephRing {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub

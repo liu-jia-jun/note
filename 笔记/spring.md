@@ -673,7 +673,166 @@ public class Orders {
 
 ## AOP
 
+### 动态代理
+
+### AOP术语
+
+1. 连接点：类中可以被增强的方法，称为连接点
+2. 切入点：实际被增强的方法称为切入点
+3. 通知：也称为增强，即实际增强的逻辑部分称为通知
+4. 切面：把通知应用到切入点的过程称为切面，也称为面向切面编程
+
+> 通知类型：
+>
+> + 前置通知
+> + 后置通知
+> + 环绕通知
+> + 异常通知
+> + 最终通知
+
+### 切入点表达式
+
+（1）切入点表达式作用：知道对哪个类里面的哪个方法进行增强 
+
+（2）语法结构： execution([权限修饰符] [返回类型] [类全路径] [方法名称]([参数列表]) ) 
+
+举例 1：对 com.atguigu.dao.BookDao 类里面的 add 进行增强 execution(* com.atguigu.dao.BookDao.add(..)) 
+
+举例 2：对 com.atguigu.dao.BookDao 类里面的所有的方法进行增强 execution(* com.atguigu.dao.BookDao.* (..)) 
+
+举例 3：对 com.atguigu.dao 包里面所有类，类里面所有方法进行增强 execution(* com.atguigu.dao.*.* (..))
+
+
+
+### 基于注解方式实现AOP操作
+
+1. 开启注解扫描与开启Aspect注解
+
+```java
+@Configuration// 配置注解
+@ComponentScan(basePackages = {"com.atguigu"}) // 开启注解扫描
+@EnableAspectJAutoProxy(proxyTargetClass = true) // 使用AspectJ实现AOP操作，即开启@Aspect注解
+public class ConfigAop {
+}
+
+```
+
+
+
+2. 创建User类，创建增强类UserProxy
+
+```java
+@Component
+public class User{// 需要增强的类
+    public void add(){
+        System.out.println("add方法");
+    }
+}
+
+
+
+//增强的类
+@Component
+@Aspect //生成代理对象，用于增强User类中的方法
+//有多个增强类多同一个方法进行增强，设置增强类优先级，在增强类上面添加注解 @Order(数字类型值)，数字类型值越小优先级越高
+@Order(1)
+public class UserProxy {
+     //前置通知
+     //@Before 注解表示作为前置通知
+     @Before(value = "execution(* com.atguigu.spring5.aopanno.User.add(..))")
+     public void before() {
+     	System.out.println("before.........");
+     }
+     //后置通知（返回通知）
+     @AfterReturning(value = "execution(* com.atguigu.spring5.aopanno.User.add(..))")
+     public void afterReturning() {
+     	System.out.println("afterReturning.........");
+     }
+     //最终通知
+     @After(value = "execution(* com.atguigu.spring5.aopanno.User.add(..))")
+     public void after() {
+    	 System.out.println("after.........");
+     }
+     //异常通知
+     @AfterThrowing(value = "execution(* com.atguigu.spring5.aopanno.User.add(..))")
+     public void afterThrowing() {
+     	System.out.println("afterThrowing.........");
+     }
+     //环绕通知
+     @Around(value = "execution(* com.atguigu.spring5.aopanno.User.add(..))")
+     public void around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+     	System.out.println("环绕之前.........");
+     	//被增强的方法执行
+     	proceedingJoinPoint.proceed();
+    	System.out.println("环绕之后.........");
+     }
+}
+
+```
+
+
+
+### 基于bean.xml配置文件方式实现AOP操作
+
+```xml
+<!--创建对象与其对应的增强对象-->
+<bean id="book" class="com.atguigu.spring5.aopxml.Book"></bean>
+<bean id="bookProxy" class="com.atguigu.spring5.aopxml.BookProxy"></bean>
+
+
+<!--配置 aop 增强-->
+<aop:config>
+     <!--切入点-->
+     <aop:pointcut id="p" expression="execution(* com.atguigu.spring5.aopxml.Book.buy(..))"/>
+     <!--配置切面-->
+     <aop:aspect ref="bookProxy">
+     <!--增强作用在具体的方法上-->
+     <aop:before method="before" pointcut-ref="p"/></aop:aspect>
+</aop:config>
+```
+
+
+
+
+
 
 
 ## Spring事务
+
+###  1、什么事务 
+
+（1）事务是数据库操作最基本单元，逻辑上一组操作，要么都成功，如果有一个失败所有操 作都失败 
+
+（2）典型场景：银行转账 * lucy 转账 100 元 给 mary * lucy 少 100，mary 多 100 
+
+### 2、事务四个特性（ACID） 
+
+（1）原子性 
+
+（2）一致性 
+
+（3）隔离性 
+
+（4）持久性
+
+### Spring声明式事务
+
+#### 基于注解方式实现事务
+
+1. 
+
+```xml
+<!--创建事务管理器-->
+<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+     <!--注入数据源-->
+     <propoperty name="dataSource" ref="dataSource"></property>
+</bean>
+
+<!--开启事务注解-->
+<tx:annotation-driven transactionmanager="transactionManager"></tx:annotation-driven>
+```
+
+
+
+#### 基于xml配置方式实现事务
 
