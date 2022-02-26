@@ -6,7 +6,7 @@ package code;
  * 回文数字
  *
  */
-public class IsPalindrome {
+public class _9_IsPalindrome {
 
 
     public boolean isPalindrome(int x) {

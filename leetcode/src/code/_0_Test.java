@@ -5,6 +5,6 @@ package code;
  */
 public class _0_Test {
     public static void main(String[] args) {
-        System.out.println("".length());
+        System.out.println('('==40);
     }
 }

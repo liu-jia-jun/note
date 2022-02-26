@@ -59,12 +59,13 @@ public class Calculator {
 
     /**
      * 简易计算器
+     * <p>
+     * 除括号，多符号（负数）的多位数的加减乘除
      *
      * @param expression
      * @return
      */
     public int simpleCalculator(String expression) {
-
 
 
         int result = 0;
@@ -76,27 +77,7 @@ public class Calculator {
         int right;
 
         while (index < len) {
-
             oper = expression.charAt(index);
-
-            if (oper == '(') {
-                String str = "";
-                index++;
-                while (index < len) {
-                    char c = expression.charAt(index);
-                    if (c == ')') {
-                        break;
-                    }
-                    str = str + c;
-                    index++;
-                }
-
-                numberStack.push(simpleCalculator(str));
-                index++;
-                break;
-            }
-
-
             if (!isOperator(oper)) {
                 number = oper - 48;
                 for (int i = index + 1; i < len; i++) {
@@ -138,7 +119,6 @@ public class Calculator {
         }
         result = numberStack.pull();
         return result;
-
     }
 
 
