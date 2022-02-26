@@ -1,3 +1,7 @@
+[TOC]
+
+
+
 # Spring5
 
 > spring  是一个全面的企业应用开发一站式的解决方案
@@ -809,17 +813,25 @@ public class UserProxy {
 
 （1）原子性 
 
+> 　原子性是指事务包含的所有操作要么全部成功，要么全部失败回滚，这和前面两篇博客介绍事务的功能是一样的概念，因此事务的操作如果成功就必须要完全应用到数据库，如果操作失败则不能对数据库有任何影响。
+
 （2）一致性 
+
+> 一致性是指事务必须使数据库从一个一致性状态变换到另一个一致性状态，也就是说一个事务执行之前和执行之后都必须处于一致性状态。
 
 （3）隔离性 
 
+> 隔离性是当多个用户并发访问数据库时，比如操作同一张表时，数据库为每一个用户开启的事务，不能被其他事务的操作所干扰，多个并发事务之间要相互隔离。
+
 （4）持久性
+
+> 持久性是指一个事务一旦被提交了，那么对数据库中的数据的改变就是永久性的，即便是在数据库系统遇到故障的情况下也不会丢失提交事务的操作。
 
 ### Spring声明式事务
 
 #### 基于注解方式实现事务
 
-1. 
+1. 配置事务
 
 ```xml
 <!--创建事务管理器-->
@@ -832,7 +844,170 @@ public class UserProxy {
 <tx:annotation-driven transactionmanager="transactionManager"></tx:annotation-driven>
 ```
 
+2. 在类或方法上添加事务注解**@Transactional**
+
+#### 关于@Transactional的属性
+
+```
+@Transactional(
+	// 设置事务传播行为
+	propagation = Propagation.REQUIRED,
+	// 设置事务隔离级别
+	ioslation = 
+	// 设置事务超时时间
+	timeout = 
+	// 设置事务是否只读
+	readOnly = false,
+	// 设置回滚
+	rollbackFor = { RunTimeException.class}
+	// 设置不回滚
+	noRollbackFor = { RunTimeException.class}
+
+)
+public void dosome(){
+	...
+} 
+```
+
+##### 1.propagation-事务传播行为
+
+**Spring中事务的七种传播行为**
+
+![](./imgs/spring中事务的七种传播行为.png)
+
+##### 2.ioslation-事务隔离级别
+
+
+
+**读未提交-->脏读**
+
+> 读未提交，顾名思义，就是一个事务可以读取另一个未提交事务的数据
+>
+> 
+>
+> 读未提交会产生脏读现象，即一个事务读取了另一个事务未提交的数据
+
+
+
+**读已提交-->不可重复读**
+
+> 读提交，顾名思义，就是一个事务要等另一个事务提交后才能读取数据。
+>
+> 
+>
+> 读以提交，每次读取的都是最新的数据，会导致每次读取时数据不同，产生不可重复读现象
+
+**可重复读-->幻读**
+
+> 重复读，就是在开始读取数据（事务开启）时，不再允许修改操作
+>
+> 
+>
+> 重复读可以解决不可重复读问题。写到这里，应该明白的一点就是，不可重复读对应的是修改，即UPDATE操作。但是可能还会有幻读问题。因为幻读问题对应的是插入INSERT操作，而不是UPDATE操作。如果在读取的时候插入了一条数据，此时这个事务是无法读取到插入的新数据的，此时产生幻读
+
+
+
+**序列化读**
+
+> **Serializable 序列化**
+>
+> Serializable 是最高的事务隔离级别，在该级别下，事务串行化顺序执行，可以避免脏读、不可重复读与幻读。但是这种事务隔离级别效率低下，比较耗数据库性能，一般不使用。
+
+**注意：MySql默认使用的事务隔离级别是可重复读，MySQL并不是所有的存储引擎都是支持事务的**
+
+
+
+![](./imgs/事务的隔离级别.png)
+
+##### 3.timeout-超时时间
+
+> 事务需要在一定的时间之内提交，设置时间以秒为单位，
+>
+> 默认值为 -1 ，-1为没有时间限制
+
+##### 4. readOnly- 是否只读
+
+> 1. 设置事务中是否为只能查询操作，不能为修改删除添加操作
+> 2. 默认值为false，表示可读，可写
+> 3. true，为只读
+
+##### 5.rollbackFor-回滚
+
+> 可以设置出现了哪些异常进行事务的回滚
+
+##### 6.noRollbackFor-不回滚
+
+> 可以设置出现了哪些异常不进行事务的回滚
+
+
+
+#### 通过配置类替代配置文件
+
+```java
+@Configuration //配置类
+@ComponentScan(basePackages = "com.atguigu") //组件扫描
+@EnableTransactionManagement //开启事务
+public class TxConfig {
+ 	//创建数据库连接池
+     @Bean
+     public DruidDataSource getDruidDataSource() {
+         DruidDataSource dataSource = new DruidDataSource();
+         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+         dataSource.setUrl("jdbc:mysql:///user_db");
+         dataSource.setUsername("root");
+         dataSource.setPassword("root");
+         return dataSource;
+     }
+     //创建 JdbcTemplate 对象
+     @Bean
+     public JdbcTemplate getJdbcTemplate(DataSource dataSource) {
+         //到 ioc 容器中根据类型找到 dataSource
+         JdbcTemplate jdbcTemplate = new JdbcTemplate();
+         //注入 dataSource
+         jdbcTemplate.setDataSource(dataSource);
+         return jdbcTemplate;
+     }
+     //创建事务管理器
+     @Bean
+     public DataSourceTransactionManager getDataSourceTransactionManager(DataSource dataSource) {
+         DataSourceTransactionManager transactionManager = new DataSourceTransactionManager();
+         transactionManager.setDataSource(dataSource);
+         return transactionManager;
+     }
+}
+
+```
+
+
+
 
 
 #### 基于xml配置方式实现事务
+
+```xml
+
+<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+     <!--注入数据源-->
+     <property name="dataSource" ref="dataSource"></property>
+</bean>
+
+
+<!--2 配置通知-->
+<tx:advice id="txadvice">
+     <!--配置事务参数-->
+     <tx:attributes>
+    	 <!--指定哪种规则的方法上面添加事务-->
+         <tx:method name="accountMoney" propagation="REQUIRED"/>
+    	 <!--<tx:method name="account*"/>-->
+     </tx:attributes>
+</tx:advice>
+<!--3 配置切入点和切面-->
+<aop:config>
+     <!--配置切入点-->
+     <aop:pointcut id="pt" expression="execution(* com.atguigu.spring5.service.UserService.*(..))"/>
+     <!--配置切面-->
+     <aop:advisor advice-ref="txadvice" pointcut-ref="pt"/>
+</aop:config>
+
+```
 
