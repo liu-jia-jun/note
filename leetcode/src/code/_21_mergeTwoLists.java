@@ -2,6 +2,12 @@ package code;
 
 /**
  * @author 刘佳俊
+ *
+ * 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+ *
+ * 这里推荐一下方法，创建一个节点，之后将其余两条链表依次添加进去，
+ *
+ * 注意判断成立条件
  */
 
 
@@ -21,6 +27,7 @@ public class _21_mergeTwoLists {
                 temp=temp.next;
             }
         }
+        // 当两条链表中其中一条为null，此时我们就可以将另一条链表剩余部分直接加在temp上
         if(list1==null){
             temp.next=list2;
         }else{
@@ -29,11 +36,4 @@ public class _21_mergeTwoLists {
 
         return list.next;
     }
-}
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }

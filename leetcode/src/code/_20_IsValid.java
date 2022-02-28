@@ -4,8 +4,10 @@ import java.util.Stack;
 
 /**
  * @author 刘佳俊
+ * 有效括号
+ *
  */
-public class IsValid {
+public class _20_IsValid {
     public boolean isValid(String s) {
         Stack<Integer> stack = new Stack<>();
         int n;
