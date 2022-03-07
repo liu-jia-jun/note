@@ -5,12 +5,9 @@ package code;
  */
 public class _0_Test {
     public static void main(String[] args) {
-        _0_Test test = new _0_Test();
-        int[] nums = new int[3];
-        for(int i=0;i<3;i++){
-            nums[i]=1;
-        }
-        System.out.println(test.removeDuplicates(nums));
+
+
+
     }
 
     public int removeDuplicates(int[] nums) {

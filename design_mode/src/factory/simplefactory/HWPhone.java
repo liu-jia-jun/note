@@ -1,5 +1,10 @@
-package factory.simplefactory;/**
+package factory.simplefactory;
+
+/**
  * @author 刘佳俊
  */
-public class HWPhone {
+public class HWPhone extends Phone{
+    public HWPhone(String type) {
+        this.phoneName=type;
+    }
 }

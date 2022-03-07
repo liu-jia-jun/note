@@ -1,4 +1,4 @@
-package factory.simplefactory;
+package factory.methodfactory;
 
 public class PhoneFactory {
 

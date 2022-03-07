@@ -8,11 +8,8 @@ import java.util.Stack;
 public class Test {
     public static void main(String[] args) {
 
-        Stack stack = new Stack();
-        stack.push("(");
-        stack.push(")");
-        stack.pop();
-        System.out.println(stack);
+     Calculator calculator = new SimpleCalculator();
+
 
 
     }

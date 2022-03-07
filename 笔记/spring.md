@@ -102,8 +102,6 @@ Bean bean = new Bean();
 
 1. 创建类，定义属性和对应的 set 方法 
 
-/** * 演示使用 set 方法进行注入属性 */ 
-
  ```java
  /**
  * 演示使用 set 方法进行注入属性
@@ -484,7 +482,7 @@ private String name;
 ```java
 （1）创建配置类，替代 xml 配置文件
 @Configuration //作为配置类，替代 xml 配置文件
-@ComponentScan(basePackages = {"com.atguigu"})// k
+@ComponentScan(basePackages = {"com.atguigu"})// 
 public class SpringConfig {
     
 }

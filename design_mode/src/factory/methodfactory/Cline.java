@@ -1,4 +1,4 @@
-package factory.simplefactory;
+package factory.methodfactory;
 
 /**
  * @author 刘佳俊
