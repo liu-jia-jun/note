@@ -12,13 +12,7 @@ public class ReversePolishCalculator extends Calculator{
     public String reversePolish(String expression){
         char[] chars = expression.toCharArray();
         for (int i=0;i<chars.length;i++){
-                if(isOperator(chars[i]) ){
-                    if(operatorStack.isEmpty()){
-                        operatorStack.push(chars[i]);
-                    }else{
 
-                    }
-                }
         }
 
         return null;

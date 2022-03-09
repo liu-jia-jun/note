@@ -29,10 +29,8 @@ public class Calculator {
             return -1;
         }
     }
-    public boolean isBracket(char bracket){
-       return bracket=='('||bracket==')'?true:false;
 
-    }
+
 
     public boolean isOperator(char oper) {// 判断输入是否为操作符
         return oper == '+' || oper == '-' || oper == '*' || oper == '/';

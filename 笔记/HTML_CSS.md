@@ -1,4 +1,4 @@
-# HTML
+HTML
 
 > HTML 指的是一种超文本标记语言,用来描述网页的一种语言
 
@@ -219,13 +219,15 @@
 ## css样式写法
 
 >+ ```
->  ```
-> <div style="color:red; font-size:16px;"></div>
+>  内嵌式
+> ```
+><div style="color:red; font-size:16px;"></div>
 ><div style="color:red; font-size:18px">内嵌式</div>
->+
+>
 >
 >````
 >```
+>内部样式
 ><style>
 >.demo1 {
 >	样式;
@@ -238,8 +240,8 @@
 >````
 >
 >+ ```
-> <!-- 通过link标签将css文件引入到本页面中，那么该css文件中的样式可以被本页面使用 -->
->  <link rel="stylesheet" href="style.css">
+><!-- 通过link标签将css文件引入到本页面中，那么该css文件中的样式可以被本页面使用 -->
+> <link rel="stylesheet" href="style.css">
 >
 >```
 
@@ -275,7 +277,7 @@
 >   .类名 {
 >   	样式;
 >   }
->                       
+>                         
 >   eg:
 >   .demo1 {
 >   	样式;
@@ -283,7 +285,7 @@
 >   .demo2 {
 >   	样式;
 >   }
->                       
+>                         
 >   <div class="demo1 demo2" >类选择器通过类名选择元素</div>
 >   ```
 >
@@ -295,12 +297,12 @@
 >   #id名 {
 >   	样式;
 >   }
->                       
+>                         
 >   eg:
 >   #demo {
 >   	样式;
 >   }
->                       
+>                         
 >   <div id="demo" >id选择器通过id名选择元素</div>
 >   ```
 >
@@ -321,7 +323,7 @@
 | --------------- | ------------------------------------ | ------------------------------------ |
 | text-align      | left，center，right                  | 设置盒子内文本的水平方向上的对齐方式 |
 | text-decoration | none,underline,overline,line-thorugh | 给文本添加下划线，上划线，删除线     |
-| text-indent     | nem（em相当于一个字的大小）          | 设置文本的第一行缩进，               |
+| text-indent     | n em（em相当于一个字的大小）         | 设置文本的第一行缩进，               |
 | line-height     | npx                                  | 行间距，文字与行间的距离             |
 
 **设置行间距为盒子高度，可以让文字垂直居中**
