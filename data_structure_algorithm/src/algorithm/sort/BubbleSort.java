@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.sort;
 
 /**
  * @author 刘佳俊
