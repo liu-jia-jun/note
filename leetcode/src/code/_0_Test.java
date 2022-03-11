@@ -8,29 +8,57 @@ import java.util.List;
  */
 public class _0_Test {
     public static void main(String[] args) {
-
-        int[] nums = new int[]{3,2,2};
-
-        findDisappearedNumbers(nums);
-
-
-    }
-    public static List<Integer> findDisappearedNumbers(int[] nums) {
-        List<Integer> list = new ArrayList<>();
-        int temp;
-        for(int i=0;i<nums.length;i++){
-            temp= (nums[i]-1)%nums.length;
-            nums[temp]+=nums.length;
+        ListNode head = new ListNode(1);
+        ListNode temp=head;
+        for(int i=1;i<=5;i++){
+            temp.next=new ListNode(i);
+            temp=temp.next;
         }
-        for(int i=0;i<nums.length;i++){
-            if(0<nums[i]&&nums[i]<=nums.length){
-                list.add(i+1);
+        boolean palindrome = isPalindrome(head);
+        System.out.println(palindrome);
+    }
+
+    public static boolean isPalindrome(ListNode head) {
+        ListNode fast = head;
+        ListNode slow = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        ListNode reversal = new ListNode();
+        ListNode temp = null;
+        if (fast != null) {
+            slow = slow.next;
+            while (slow != null) {
+                temp = slow;
+                slow = slow.next;
+                temp.next = reversal.next;
+                reversal.next = temp;
+            }
+
+        } else {
+            while (slow != null) {
+                temp = slow;
+                slow = slow.next;
+                temp.next = reversal.next;
+                reversal.next = temp;
+            }
+
+        }
+        fast = head;
+        reversal = reversal.next;
+        while (reversal != null) {
+            if (fast.val == reversal.val) {
+                fast = fast.next;
+                reversal = reversal.next;
+            } else {
+                return false;
             }
         }
-        for (Integer integer : list) {
-            System.out.println(integer);
-        }
-        return list;
+        return true;
+
+
     }
+
 
 }

@@ -65,10 +65,10 @@ public class Maze {
                     return false;
                 }
             } else {
-            } else {
                 return false;
             }
         }
+
 
     }
 }

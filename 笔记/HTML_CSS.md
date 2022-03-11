@@ -277,7 +277,7 @@ HTML
 >   .类名 {
 >   	样式;
 >   }
->                         
+>                           
 >   eg:
 >   .demo1 {
 >   	样式;
@@ -285,7 +285,7 @@ HTML
 >   .demo2 {
 >   	样式;
 >   }
->                         
+>                           
 >   <div class="demo1 demo2" >类选择器通过类名选择元素</div>
 >   ```
 >
@@ -297,12 +297,12 @@ HTML
 >   #id名 {
 >   	样式;
 >   }
->                         
+>                           
 >   eg:
 >   #demo {
 >   	样式;
 >   }
->                         
+>                           
 >   <div id="demo" >id选择器通过id名选择元素</div>
 >   ```
 >
@@ -429,7 +429,7 @@ HTML
 1. 将行内元素转换为块级元素	display:block;
 2. 将块级元素转换为行内元素	display:inline;
 3. 将元素转换为行内块元素	display:inline-block;
-4. 控制元素不显示                    display：none
+4. 控制元素不显示                    display：none  
 
 ## 背景
 
@@ -438,7 +438,7 @@ HTML
 | background-color      | red,rgb,rgba,十六进制                       | 设置背景颜色                       |
 | --------------------- | ------------------------------------------- | ---------------------------------- |
 | background-image      | url(背景图片的地址)                         | 设置背景图片                       |
-| background-repeat     | repeat，no-repeat , repeat-x , repeat-y     | 设置背景图片平铺                   |
+| background-repeat     | repeat，no-repeat , repeat-x , repeat-y     | 设置背景图片是否平铺               |
 | background-position   | npx,npx; center,top,right,left              | 设置背景图片的位置                 |
 | background-attachment | scroll（随其他内容滚动） 或者 fixed（固定） | 设置背景图片是否固定或者随页面滚动 |
 
