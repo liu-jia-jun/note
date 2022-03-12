@@ -7,7 +7,7 @@ import java.util.List;
  * @author 刘佳俊
  */
 public class _448_FindDisappearedNumbers {
-    public static List<Integer> findDisappearedNumbers(int[] nums) {
+    public  List<Integer> findDisappearedNumbers(int[] nums) {
         List<Integer> list = new ArrayList<>();
         int temp;
         for(int i=0;i<nums.length;i++){
@@ -19,9 +19,7 @@ public class _448_FindDisappearedNumbers {
                 list.add(i+1);
             }
         }
-        for (Integer integer : list) {
-            System.out.println(integer);
-        }
+
         return list;
     }
 
