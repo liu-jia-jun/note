@@ -36,7 +36,7 @@ public class Maze {
             }
             System.out.println();
         }
-        setWay(map, 1, 1);
+        setWay(map, 1, 2);
 //输出新的地图, 小球走过，并标识过的递归
         System.out.println("小球走过，并标识过的 地图的情况");
         for (int i = 0; i < 8; i++) {
@@ -52,7 +52,7 @@ public class Maze {
             return true;
         } else {
             if (map[i][j] == 0) {
-                map[i][j]=2;
+                map[i][j] = 2;
                 if (setWay(map, i + 1, j)) {
                     return true;
                 } else if (setWay(map, i, j + 1)) {
@@ -61,15 +61,14 @@ public class Maze {
                     return true;
                 } else if (setWay(map, i, j - 1)) {
                     return true;
+
+                } else {
                     map[i][j] = 3;
                     return false;
                 }
-            } else {
-                return false;
             }
+            return false;
         }
-
-
     }
 }
 
