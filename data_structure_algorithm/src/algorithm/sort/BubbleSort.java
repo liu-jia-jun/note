@@ -1,20 +1,27 @@
 package algorithm.sort;
 
+import algorithm.util.MyArray;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * @author 刘佳俊
  * 冒泡排序
  */
 public class BubbleSort {
     public static void main(String[] args) {
-        int[] arr = new int[4];
-        arr[0] = 15;
-        arr[1] = 116;
-        arr[2] = 48;
-        arr[3] = 618;
-        int[] ints = bubbleSort(arr);
-        for (int anInt : ints) {
-            System.out.println(anInt);
-        }
+        int[] arr = MyArray.getUnorderedArray(80000);
+        System.out.println("排序前");
+        Date data1 = new Date();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String date1Str = simpleDateFormat.format(data1);
+        System.out.println("排序前的时间是=" + date1Str);
+
+        bubbleSort(arr);
+        Date data2 = new Date();
+        String date2Str = simpleDateFormat.format(data2);
+        System.out.println("排序前的时间是=" + date2Str);
 
     }
 
@@ -33,7 +40,7 @@ public class BubbleSort {
                 }
             }
             if (flag == true) {
-                System.out.println("退出");
+                // 优化，当有一次的循环中没有一次元素的互换就认为元素排序完成
                 break;
             } else {
                 flag = true;

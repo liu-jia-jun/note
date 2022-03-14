@@ -2,16 +2,25 @@ package algorithm.sort;
 
 import algorithm.util.MyArray;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * @author 刘佳俊
  */
 public class SelectiontSort {
     public static void main(String[] args) {
-        int[] arr = MyArray.getUnorderedArray(15);
-        int[] ints = selectiontSort(arr);
-        for (int anInt : ints) {
-            System.out.println(anInt);
-        }
+        int[] arr = MyArray.getUnorderedArray(80000);
+        System.out.println("排序前");
+        Date data1 = new Date();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String date1Str = simpleDateFormat.format(data1);
+        System.out.println("排序前的时间是=" + date1Str);
+
+        selectiontSort(arr);
+        Date data2 = new Date();
+        String date2Str = simpleDateFormat.format(data2);
+        System.out.println("排序前的时间是=" + date2Str);
     }
     public static int[] selectiontSort(int[] array){
 
