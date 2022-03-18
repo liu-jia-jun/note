@@ -12,7 +12,7 @@ import java.util.Date;
  */
 public class ShellSort {
     public static void main(String[] args) {
-        int[] arr = MyArray.getUnorderedArray(80);
+        int[] arr = MyArray.getUnorderedArray(1000000);
         System.out.println("排序前");
         Date data1 = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -24,14 +24,14 @@ public class ShellSort {
         String date2Str = simpleDateFormat.format(data2);
         System.out.println("排序前的时间是=" + date2Str);
 
-        System.out.println(Arrays.toString(arr));
+//        System.out.println(Arrays.toString(arr));
     }
 
     public static int[] shellSort(int[] array) {
 
         int temp;
         for (int gap = array.length / 2; gap > 0; gap = gap / 2) {
-            for (int i = gap; i < array.length; i += gap) {
+            for (int i = gap; i < array.length; i += 1) {
                 temp = array[i];
                 int j;
                 for (j = i - gap; j >= 0 && array[j] > temp; j -= gap) {

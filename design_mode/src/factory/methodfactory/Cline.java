@@ -5,10 +5,7 @@ package factory.methodfactory;
  */
 public class Cline {
     public static void main(String[] args) {
-        PhoneFactory phoneFactory = new PhoneFactory();
-        Phone mPhone = phoneFactory.makePhone("小米");
-        mPhone.showPhone();
-        Phone hPhone = phoneFactory.makePhone("华为");
-        hPhone.showPhone();
+        new AbroadPhone().showPhone("小米");
+        new AbroadPhone().showPhone("华为");
     }
 }

@@ -3,8 +3,8 @@ package factory.methodfactory;
 /**
  * @author 刘佳俊
  */
-public class XMPhone extends Phone {
-    public XMPhone(String phoneName) {
+public class DomesticXMPhone extends Phone {
+    public DomesticXMPhone(String phoneName) {
         super(phoneName);
     }
 }

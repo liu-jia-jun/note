@@ -5,7 +5,6 @@ package factory.methodfactory;
  */
 public class Phone {
     String phoneName;
-
     public Phone(){}
 
     public Phone(String phoneName) {

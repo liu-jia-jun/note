@@ -12,7 +12,7 @@ import java.util.Date;
  */
 public class InsertSort {
     public static void main(String[] args) {
-        int[] arr = MyArray.getUnorderedArray(80);
+        int[] arr = MyArray.getUnorderedArray(1000000);
         System.out.println("排序前");
         Date data1 = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -23,7 +23,7 @@ public class InsertSort {
         Date data2 = new Date();
         String date2Str = simpleDateFormat.format(data2);
         System.out.println("排序前的时间是=" + date2Str);
-        System.out.println(Arrays.toString(arr));
+//        System.out.println(Arrays.toString(arr));
     }
 
     public static int[] insertSort(int[] array) {

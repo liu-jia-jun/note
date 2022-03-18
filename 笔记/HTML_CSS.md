@@ -1,4 +1,4 @@
-HTML
+asssssssaazazzaxHTML
 
 > HTML 指的是一种超文本标记语言,用来描述网页的一种语言
 
@@ -277,7 +277,7 @@ HTML
 >   .类名 {
 >   	样式;
 >   }
->                           
+>                                 
 >   eg:
 >   .demo1 {
 >   	样式;
@@ -285,7 +285,7 @@ HTML
 >   .demo2 {
 >   	样式;
 >   }
->                           
+>                                 
 >   <div class="demo1 demo2" >类选择器通过类名选择元素</div>
 >   ```
 >
@@ -297,12 +297,12 @@ HTML
 >   #id名 {
 >   	样式;
 >   }
->                           
+>                                 
 >   eg:
 >   #demo {
 >   	样式;
 >   }
->                           
+>                                 
 >   <div id="demo" >id选择器通过id名选择元素</div>
 >   ```
 >
@@ -723,7 +723,7 @@ float:right;向右浮动
 > 	top:50%;
 > 	left:50%;
 > 	margin-left:-1/2*width;
-> 	margin-top:-1/2*right;
+> 	margin-top:-1/2*height  ;
 > }
 > top:50%;这样设置可以让绝对定位的盒子的左侧移动到相对于父元素的水平方向上的中心位置
 > left:50%;这样设置可以让绝对定位的盒子的上侧移动到相对于父元素的垂直方向上的中心位置
