@@ -22,7 +22,7 @@ public class BubbleSort {
         Date data2 = new Date();
         String date2Str = simpleDateFormat.format(data2);
         System.out.println("排序前的时间是=" + date2Str);
-
+//        System.out.println(Arrays.toString(arr));
     }
 
     public static int[] bubbleSort(int[] arr) {
