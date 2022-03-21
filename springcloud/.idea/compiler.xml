@@ -3,6 +3,15 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud_provider_payment8001" />
+        <module name="cloud_consumer_order88" />
+        <module name="cloud_eureka_server7001" />
+        <module name="cloud_api_commons" />
+      </profile>
     </annotationProcessing>
   </component>
 </project>
