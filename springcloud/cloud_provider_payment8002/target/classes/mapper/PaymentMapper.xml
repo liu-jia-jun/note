@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cloud.payment.dao.PaymentMapper">
+    <resultMap id="baseResultMap" type="com.cloud.common.entities.Payment">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="serial" property="serial" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="getPaymentById" parameterType="Long" resultMap="baseResultMap">
+        select *
+        from payment
+        where id = #{id}
+    </select>
+
+
+    <!--mybatis数据插入成功，必然会返回来一个数字，如果大于0则插入成功，所以新增方法我们都会返回int，使用useGeneratedKeys="true"返回这个key，
+    keyProperty="id"表示返回实体类中的id属性-->
+    <insert id="create" parameterType="com.cloud.common.entities.Payment" useGeneratedKeys="true" keyProperty="id">
+        insert into payment(serial)
+        value (#{serial})
+    </insert>
+</mapper>

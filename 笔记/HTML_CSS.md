@@ -1,4 +1,4 @@
-asssssssaazazzaxHTML
+# HTML
 
 > HTML 指的是一种超文本标记语言,用来描述网页的一种语言
 
@@ -277,7 +277,7 @@ asssssssaazazzaxHTML
 >   .类名 {
 >   	样式;
 >   }
->                                 
+>                                     
 >   eg:
 >   .demo1 {
 >   	样式;
@@ -285,7 +285,7 @@ asssssssaazazzaxHTML
 >   .demo2 {
 >   	样式;
 >   }
->                                 
+>                                     
 >   <div class="demo1 demo2" >类选择器通过类名选择元素</div>
 >   ```
 >
@@ -297,12 +297,12 @@ asssssssaazazzaxHTML
 >   #id名 {
 >   	样式;
 >   }
->                                 
+>                                     
 >   eg:
 >   #demo {
 >   	样式;
 >   }
->                                 
+>                                     
 >   <div id="demo" >id选择器通过id名选择元素</div>
 >   ```
 >
@@ -769,8 +769,6 @@ float:right;向右浮动
 + overflow：hidden   隐藏超出盒子尺寸的内容
 + overflow：scroll      显示滚动条
 + overflow：auto        自适应，内容超出则显示滚动条，不超出不显示	
-
-
 
 ## CSS用户界面样式
 

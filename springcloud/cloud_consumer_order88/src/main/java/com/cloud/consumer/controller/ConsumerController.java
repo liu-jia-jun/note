@@ -16,12 +16,15 @@ public class ConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
-    private String address = "http://localhost:8001";
+//    private String address = "http://localhost:8001";
 
+    // 通过服务名调用服务
+    private String address = "http://CLOUD-PAYMENT-SERVICE";
 
     @GetMapping("/{id}")
     public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id){
-       return restTemplate.getForObject(address+"/payment/"+id,CommonResult.class);
+        System.out.println("+++++++++++++++++++++++++++:"+address);
+        return restTemplate.getForObject(address+"/payment/"+id,CommonResult.class);
     }
     @PostMapping("/create")
     public CommonResult<Payment> create(Payment payment){
