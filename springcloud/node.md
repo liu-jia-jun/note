@@ -51,3 +51,8 @@ SpringApplication.run(SpringbootApplication.class, args);
 **注意：因为@Mapper与MapperScan均为产生mapper接口的实现类所以推荐正确使用，最好不要一起使用不然会出现错误**
 
 **注意：springcloud启动微服务时，不支持下划线，需要使用横线，即命名时使用横线代替下划线**
+
+### consul
+1. 在consul的目录下用cmd形式打开 
+2. consul agent -dev 启动consul 
+3. localhost:8500 是consul默认的ui界面
