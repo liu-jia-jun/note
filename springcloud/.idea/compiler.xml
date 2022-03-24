@@ -7,8 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="cloud_provider_payment8004" />
         <module name="cloud_provider_payment8002" />
         <module name="cloud_provider_payment8001" />
+        <module name="cloud_providerconsul_payment8006" />
+        <module name="cloud_consumerzk_order88" />
+        <module name="cloud_consumerconsul_order88" />
         <module name="cloud_consumer_order88" />
         <module name="cloud_eureka_server7002" />
         <module name="cloud_eureka_server7001" />

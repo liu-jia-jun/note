@@ -277,7 +277,7 @@
 >   .类名 {
 >   	样式;
 >   }
->                                     
+>                                       
 >   eg:
 >   .demo1 {
 >   	样式;
@@ -285,7 +285,7 @@
 >   .demo2 {
 >   	样式;
 >   }
->                                     
+>                                       
 >   <div class="demo1 demo2" >类选择器通过类名选择元素</div>
 >   ```
 >
@@ -297,12 +297,12 @@
 >   #id名 {
 >   	样式;
 >   }
->                                     
+>                                       
 >   eg:
 >   #demo {
 >   	样式;
 >   }
->                                     
+>                                       
 >   <div id="demo" >id选择器通过id名选择元素</div>
 >   ```
 >
@@ -770,6 +770,8 @@ float:right;向右浮动
 + overflow：scroll      显示滚动条
 + overflow：auto        自适应，内容超出则显示滚动条，不超出不显示	
 
+http://www.baidu.com
+
 ## CSS用户界面样式
 
 ### 鼠标样式：cursor
@@ -779,7 +781,7 @@ cursor:default;	默认白色箭头
 	   pointer;	小手
 	   move;	移动
 	   text;	文本
-	   not-allowed;禁止
+	   not-allowed;禁止  
 ```
 
 
@@ -826,3 +828,4 @@ vertical-align:baseline;	基线对齐 默认，将元素放置在父元素的基
 **这些标签表示的都是类似于div的盒子，只是通过不同单词表现出来，实现语义化**
 
  
+

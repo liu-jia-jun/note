@@ -8,6 +8,8 @@ import java.util.Date;
 
 /**
  * @author 刘佳俊
+ * 插入排序
+ *
  */
 public class InsertSort {
     public static void main(String[] args) {

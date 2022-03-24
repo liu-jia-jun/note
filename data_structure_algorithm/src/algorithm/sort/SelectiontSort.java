@@ -7,6 +7,7 @@ import java.util.Date;
 
 /**
  * @author 刘佳俊
+ * 选择排序
  */
 public class SelectiontSort {
     public static void main(String[] args) {

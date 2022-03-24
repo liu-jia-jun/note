@@ -8,6 +8,7 @@ import java.util.Date;
 
 /**
  * @author 刘佳俊
+ * 快速排序
  */
 public class QuickSort {
 
