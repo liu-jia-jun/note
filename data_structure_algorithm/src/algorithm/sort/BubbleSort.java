@@ -3,6 +3,7 @@ package algorithm.sort;
 import algorithm.util.MyArray;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -11,7 +12,7 @@ import java.util.Date;
  */
 public class BubbleSort {
     public static void main(String[] args) {
-        int[] arr = MyArray.getUnorderedArray(80000);
+        int[] arr = MyArray.getUnorderedArray(8);
         System.out.println("排序前");
         Date data1 = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -22,7 +23,7 @@ public class BubbleSort {
         Date data2 = new Date();
         String date2Str = simpleDateFormat.format(data2);
         System.out.println("排序前的时间是=" + date2Str);
-//        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr));
     }
 
     public static int[] bubbleSort(int[] arr) {
