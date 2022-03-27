@@ -22,8 +22,8 @@ public class PaymentController {
     @Autowired
     private PaymentService paymentService;
 
-    //    @Value("server.port")
-    private String serverPort = "8002";
+    @Value("${server.port}")
+    private String serverPort;
 
     @PostMapping("")
     public CommonResult create(@RequestBody Payment payment) {
@@ -62,4 +62,8 @@ public class PaymentController {
         return serverPort;
     }
 
+    @GetMapping("/lb/test")
+    public String lb() {
+        return serverPort;
+    }
 }

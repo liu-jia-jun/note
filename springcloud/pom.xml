@@ -24,6 +24,10 @@
         <module>cloud_consumer_feign_order80</module>
         <module>cloud_provider_hystrix_payment8001</module>
         <module>cloud_consumer_feign_hystrix_order88</module>
+        <module>cloud_consumer_hystrix_dashboard9001</module>
+        <module>cloud_gateway_gateway9527</module>
+        <module>cloud_config_center3344</module>
+        <module>cloud_config_client3355</module>
 
         <!--            <module>cloud_consumerconsul_order80</module>-->
         <!--    <module>cloud-consumer-feign-order80</module>-->

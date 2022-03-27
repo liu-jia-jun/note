@@ -15,11 +15,15 @@
         <module name="cloud_provider_payment8004" />
         <module name="cloud_provider_payment8002" />
         <module name="cloud_provider_payment8001" />
+        <module name="cloud_consumer_hystrix_dashboard9001" />
         <module name="cloud_consumerzk_order88" />
+        <module name="cloud_config_center3344" />
         <module name="cloud_consumerconsul_order88" />
+        <module name="cloud_config_client3355" />
         <module name="cloud_eureka_server7002" />
         <module name="cloud_eureka_server7001" />
         <module name="cloud_api_commons" />
+        <module name="cloud_gateway_gateway9527" />
       </profile>
     </annotationProcessing>
   </component>

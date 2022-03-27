@@ -26,8 +26,8 @@ public class PaymentController {
     @Autowired
     private PaymentService paymentService;
 
-    //    @Value("server.port")
-    private String serverPort = "8001";
+    @Value("${server.port}")
+    private String serverPort;
 
     @Autowired
     private DiscoveryClient discoveryClient;
@@ -82,5 +82,10 @@ public class PaymentController {
         return serverPort;
     }
 
+
+    @GetMapping("/lb/test")
+    public String lb(){
+        return serverPort;
+    }
 
 }
