@@ -8,22 +8,30 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cloud_provider_hystrix_payment8001" />
-        <module name="cloud_consumer_feign_hystrix_order88" />
-        <module name="cloud_providerconsul_payment8006" />
+        <module name="cloudalibaba_provider_payment9002" />
+        <module name="cloudalibaba_provider_payment9001" />
         <module name="cloud_consumer_feign_order80" />
-        <module name="cloud_consumer_order88" />
+        <module name="cloudalibaba_consumer_nacos_order83" />
         <module name="cloud_provider_payment8004" />
         <module name="cloud_provider_payment8002" />
         <module name="cloud_provider_payment8001" />
         <module name="cloud_consumer_hystrix_dashboard9001" />
-        <module name="cloud_consumerzk_order88" />
-        <module name="cloud_config_center3344" />
-        <module name="cloud_consumerconsul_order88" />
-        <module name="cloud_config_client3355" />
+        <module name="cloud_config_client3366" />
         <module name="cloud_eureka_server7002" />
         <module name="cloud_eureka_server7001" />
         <module name="cloud_api_commons" />
         <module name="cloud_gateway_gateway9527" />
+        <module name="cloud_consumer_feign_hystrix_order88" />
+        <module name="cloud_providerconsul_payment8006" />
+        <module name="cloud_stream_rabbitmq_consumer8802" />
+        <module name="cloud_stream_rabbitmq_consumer8803" />
+        <module name="cloud_consumer_order88" />
+        <module name="cloud_stream_rabbitmq_provider8801" />
+        <module name="cloudalibaba_config_nacos_client3377" />
+        <module name="cloud_consumerzk_order88" />
+        <module name="cloud_config_center3344" />
+        <module name="cloud_consumerconsul_order88" />
+        <module name="cloud_config_client3355" />
       </profile>
     </annotationProcessing>
   </component>

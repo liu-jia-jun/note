@@ -28,16 +28,14 @@
         <module>cloud_gateway_gateway9527</module>
         <module>cloud_config_center3344</module>
         <module>cloud_config_client3355</module>
-
-        <!--            <module>cloud_consumerconsul_order80</module>-->
-        <!--    <module>cloud-consumer-feign-order80</module>-->
-        <!--    <module>cloud-provider-hystrix-payment8001</module>-->
-        <!--    <module>cloud-consumer-feign-hystrix-order80</module>-->
-        <!--    <module>cloud-consumer-hystrix-dashboard9001</module>-->
-        <!--    <module>cloud-gateway-gateway9527</module>-->
-        <!--    <module>cloud-config-center-3344</module>-->
-        <!--    <module>cloud-config-client-3355</module>-->
-        <!--    <module>cloud-config-client-3366</module>-->
+        <module>cloud_config_client3366</module>
+        <module>cloud_stream_rabbitmq_provider8801</module>
+        <module>cloud_stream_rabbitmq_consumer8802</module>
+        <module>cloud_stream_rabbitmq_consumer8803</module>
+        <module>cloudalibaba_provider_payment9001</module>
+        <module>cloudalibaba_provider_payment9002</module>
+        <module>cloudalibaba_consumer_nacos_order83</module>
+        <module>cloudalibaba_config_nacos_client3377</module>
         <!--    <module>cloud-stream-rabbitmq-provider8801</module>-->
         <!--    <module>cloud-stream-rabbitmq-consumer8802</module>-->
         <!--    <module>cloud-stream-rabbitmq-consumer8803</module>-->
