@@ -37,6 +37,9 @@
         <module>cloudalibaba_consumer_nacos_order83</module>
         <module>cloudalibaba_config_nacos_client3377</module>
         <module>cloudalibaba_sentinel_service8401</module>
+        <module>cloudalibaba_provider_payment9003</module>
+        <module>cloudalibaba_provider_payment9004</module>
+        <module>cloudalibaba_consumer_nacos_order84</module>
         <!--    <module>cloud-stream-rabbitmq-provider8801</module>-->
         <!--    <module>cloud-stream-rabbitmq-consumer8802</module>-->
         <!--    <module>cloud-stream-rabbitmq-consumer8803</module>-->

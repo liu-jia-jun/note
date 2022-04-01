@@ -10,6 +10,9 @@
         <module name="cloud_provider_hystrix_payment8001" />
         <module name="cloudalibaba_provider_payment9002" />
         <module name="cloudalibaba_provider_payment9001" />
+        <module name="cloudalibaba_provider_payment9004" />
+        <module name="cloudalibaba_provider_payment9003" />
+        <module name="cloudalibaba_consumer_nacos_order84" />
         <module name="cloud_consumer_feign_order80" />
         <module name="cloudalibaba_sentinel_service8401" />
         <module name="cloudalibaba_consumer_nacos_order83" />
