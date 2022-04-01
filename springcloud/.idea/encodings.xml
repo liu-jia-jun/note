@@ -51,6 +51,8 @@
     <file url="file://$PROJECT_DIR$/cloudalibaba_provider_payment9001/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloudalibaba_provider_payment9002/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloudalibaba_provider_payment9002/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba_sentinel_service8401/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba_sentinel_service8401/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
