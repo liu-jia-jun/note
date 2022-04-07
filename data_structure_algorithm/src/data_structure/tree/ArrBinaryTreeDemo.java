@@ -5,26 +5,28 @@ package data_structure.tree;
  */
 public class ArrBinaryTreeDemo {
 
-    static int[] arr;
+    private int[] arr={1,2,3,4,5,6,7,8,9};
 
     public static void main(String[] args) {
-
+        ArrBinaryTreeDemo demo = new ArrBinaryTreeDemo();
+        demo.pre();
     }
 
-    public static void preOrder(int index) {
-        //如果数组为空，或者 arr.length = 0
-        if (arr == null || arr.length == 0) {
-            System.out.println("数组为空，不能按照二叉树的前序遍历");
+    void pre(){
+        if(arr==null||arr.length<1){
+            System.out.println("数组为空");
+        }else{
+            this.preOrder(0, arr.length);
         }
-        //输出当前这个元素
+    }
+
+    public  void preOrder(int index,int len) {
         System.out.println(arr[index]);
-        //向左递归遍历
-        if ((index * 2 + 1) < arr.length) {
-            preOrder(2 * index + 1);
+        if(2*index+1< len){
+            preOrder(2*index+1,len);
         }
-        //向右递归遍历
-        if ((index * 2 + 2) < arr.length) {
-            preOrder(2 * index + 2);
+        if(2*index+2< len){
+            preOrder(2*index+2,len);
         }
     }
 
