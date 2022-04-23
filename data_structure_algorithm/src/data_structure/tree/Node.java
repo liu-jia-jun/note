@@ -3,7 +3,7 @@ package data_structure.tree;
 /**
  * @author 刘佳俊
  */
-public class Node {
+public class Node implements Comparable<Node> {
 
     private Node left = null;
     private Node right = null;
@@ -154,4 +154,8 @@ public class Node {
 
     }
 
+    @Override
+    public int compareTo(Node o) {
+        return this.data-o.data;
+    }
 }

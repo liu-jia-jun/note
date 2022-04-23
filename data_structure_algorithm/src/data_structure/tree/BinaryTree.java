@@ -2,6 +2,8 @@ package data_structure.tree;
 
 /**
  * @author 刘佳俊
+ *
+ * 二叉树的实现
  */
 public class BinaryTree {
     private Node root;
