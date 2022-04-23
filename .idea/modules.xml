@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/data_structure_algorithm/data_structure_algorithm.iml" filepath="$PROJECT_DIR$/data_structure_algorithm/data_structure_algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/design_mode/design_mode.iml" filepath="$PROJECT_DIR$/design_mode/design_mode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/interview/interview.iml" filepath="$PROJECT_DIR$/interview/interview.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode/leetcode.iml" filepath="$PROJECT_DIR$/leetcode/leetcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/node.iml" filepath="$PROJECT_DIR$/node.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
