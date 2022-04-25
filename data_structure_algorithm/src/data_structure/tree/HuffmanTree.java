@@ -13,10 +13,7 @@ public class HuffmanTree {
     public static void main(String[] args) {
         int arr[] = {13, 7, 8, 3, 29, 6, 1};
         Node root = createHuffmanTree(arr);
-
         root.infixOrder();
-
-
     }
 
     public static Node createHuffmanTree(int[] arr) {
@@ -25,12 +22,9 @@ public class HuffmanTree {
         for (int i = 0; i < arr.length; i++) {
             list.add(new Node(arr[i]));
         }
-
-
         while (list.size() > 1) {
             // 将这些节点根据data值进行排序
             Collections.sort(list);
-
             Node node1 = list.remove(0);
             Node node2 = list.remove(0);
             Node root = new Node(node1.getData() + node2.getData());
@@ -38,10 +32,7 @@ public class HuffmanTree {
             root.setRight(node2);
             list.add(root);
         }
-
         return list.remove(0);
-
-
     }
 
 

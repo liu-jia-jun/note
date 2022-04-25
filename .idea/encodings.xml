@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/data_structure_algorithm/src/data_structure/tree/HuffmanCodeTree.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../../data/网课资料/数据结构与算法/代码/DataStructures/src/com/atguigu/recursion/MiGong.java" charset="GBK" />
   </component>
 </project>
