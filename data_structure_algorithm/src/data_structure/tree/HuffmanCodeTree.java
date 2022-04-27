@@ -83,7 +83,7 @@ public class HuffmanCodeTree {
         // 如果是正数我们还存在补高位
 
         temp |= 256; // 按位或 256 10 0000 0000 | 0000 0001 => 1 0000 0001
-        
+
         String str = Integer.toBinaryString(temp);// 返回的是temp对应的二进制的补码
         if (flag) {
             return str.substring(str.length() - 8);
