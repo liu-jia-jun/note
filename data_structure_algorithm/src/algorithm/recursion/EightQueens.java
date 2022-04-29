@@ -2,6 +2,7 @@ package algorithm.recursion;
 
 /**
  * @author 刘佳俊
+ * 八皇后问题
  */
 public class EightQueens {
     int max = 8;

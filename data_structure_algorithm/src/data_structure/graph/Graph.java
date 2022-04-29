@@ -2,6 +2,9 @@ package data_structure.graph;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.concurrent.ArrayBlockingQueue;
 
 /**
  * @author 刘佳俊
@@ -16,20 +19,41 @@ public class Graph {
         // 节点个数
         int n = 5;
 
-        String vertexs[] = {"A", "B", "C", "D", "E"};
+//        String vertexs[] = {"A", "B", "C", "D", "E"};
+        String vertexs[] = {"1", "2", "3", "4", "5", "6", "7", "8"};
         // 创建图对象
-        Graph graph = new Graph(n);
+        Graph graph = new Graph(vertexs.length);
         for (String vertex : vertexs) {
             graph.insertVertex(vertex);
         }
         // 添加边
-        graph.insertEdge(0, 4, 1);
-        graph.insertEdge(4, 3, 1);
-        graph.insertEdge(4, 2, 1);
+//        graph.insertEdge(0, 4, 1);
+//        graph.insertEdge(4, 3, 1);
+//        graph.insertEdge(4, 2, 1);
+//        graph.insertEdge(2, 1, 1);
 
-        graph.insertEdge(2, 1, 1);
+        // 更新边的关系用于测试深度优先和广度优先的区别
+        graph.insertEdge(0, 1, 1);
+        graph.insertEdge(0, 2, 1);
+        graph.insertEdge(1, 3, 1);
+        graph.insertEdge(1, 4, 1);
+        graph.insertEdge(3, 7, 1);
+        graph.insertEdge(4, 7, 1);
+        graph.insertEdge(2, 5, 1);
+        graph.insertEdge(2, 6, 1);
+        graph.insertEdge(5, 6, 1);
+
         graph.showGraph();
+
+        // 深度优先
         graph.dfs2(0);
+
+        //重置顶点状态
+        graph.flag=new boolean[vertexs.length];
+        System.out.println();
+
+        //广度优先
+        graph.bfs(0);
 
     }
 
@@ -38,9 +62,57 @@ public class Graph {
         vertexList = new ArrayList<>(n);
         edges = new int[n][n];
         flag = new boolean[n];
+
         numOfEdges = 0;
     }
 
+
+//    广度优先遍历begin
+
+    // 获取该节点的未被遍历过的邻接节点
+    public int getNeighborForBFS(int index, int begin) {
+        for (int i = begin; i < vertexList.size(); i++) {
+            if (edges[index][i] > 0 && flag[i] == false) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+
+    private LinkedList<Integer> queue = new LinkedList<>();
+
+    public void bfs(int index) {
+
+        if (!flag[index]) {
+            System.out.print(getValueByIndex(index) + "->");
+            flag[index] = true;
+        }
+
+        int next = 0;
+        while (true) {
+            next = getNeighborForBFS(index, next);
+            if (next != -1) {
+                System.out.print(getValueByIndex(next) + "->");
+                flag[next] = true;
+                queue.addLast(next);
+            } else {
+                break;
+            }
+        }
+
+        if (!queue.isEmpty()) {
+            bfs(queue.removeFirst());
+        }
+
+
+    }
+
+
+//    广度优先遍历end
+
+
+    //    深度优先遍历begin
     private int getFirstNeighbor(int index) {
         for (int i = 0; i < vertexList.size(); i++) {
             if (edges[index][i] > 0) {
@@ -75,25 +147,25 @@ public class Graph {
             w = getNextNeighbor(i, w);
         }
     }
+//  深度优先遍历end
 
-
-    // 自己实现的
+    // 自己实现的深度优先遍历begin
     public void dfs2(int index) {
         if (!flag[index]) {
             System.out.print(getValueByIndex(index) + "->");
             flag[index] = true;
         }
         // 对于一个顶点第一次查找邻接顶点,是从0开始的
-        int w = getNeighbor(index,0);
+        int w = getNeighbor(index, 0);
         while (w != -1) {
             dfs2(w);
             // 注意这里我们任然将正在遍历的顶点的index传入,因为我们需要遍历剩下的邻接顶点,这里的w是查找邻接顶点的开始坐标,
-            w = getNeighbor(index,w);
+            w = getNeighbor(index, w);
         }
     }
 
-    public int getNeighbor(int index,int begin) {
-        for (int i = begin+1; i < vertexList.size(); i++) {
+    public int getNeighbor(int index, int begin) {
+        for (int i = begin; i < vertexList.size(); i++) {
             if (edges[index][i] > 0 && flag[i] == false) {
                 return i;
             }
@@ -102,6 +174,7 @@ public class Graph {
 
         return -1;
     }
+//    深度优先遍历end
 
     // 图中常用的方法
 

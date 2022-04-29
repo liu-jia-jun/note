@@ -9,11 +9,13 @@ import java.util.List;
  */
 public class BinarySearch {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 99};
-        System.out.println(biarySearch2(arr, 9));
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 99};
+        // 返回下标
+        System.out.println(binarySearch(arr, 9));
+        System.out.println(binarySearchByRecursion(0, arr.length, 9, arr));
     }
 
-    private static int biarySearch(int[] arr, int target) {
+    private static int binarySearch(int[] arr, int target) {
         int left = 0;
         int right = arr.length - 1;
         int middle;
@@ -30,7 +32,8 @@ public class BinarySearch {
         return -1;
     }
 
-    private static List<Integer> biarySearch2(int[] arr, int target) {
+    // 返回查找到的所有的目标值的下标并以数组的形式返回
+    private static List<Integer> binarySearchAll(int[] arr, int target) {
         int left = 0;
         int right = arr.length - 1;
         int middle;
@@ -44,7 +47,7 @@ public class BinarySearch {
                     if (arr[i] == target) {
                         list.add(i);
                         i--;
-                    }else{
+                    } else {
                         break;
                     }
 
@@ -53,7 +56,7 @@ public class BinarySearch {
                     if (arr[j] == target) {
                         list.add(j);
                         j++;
-                    }else {
+                    } else {
                         break;
                     }
                 }
@@ -66,4 +69,55 @@ public class BinarySearch {
         }
         return list;
     }
+
+    public static List<Integer> binarySearchByRecursionAll(int left, int right, int target, int[] arr, List<Integer> list) {
+        if (left > right) {
+            list.add(-1);
+            return list;
+        }
+        int middle = (left + right) / 2;
+        if (arr[middle] == target) {
+            list.add(middle);
+            int i = middle - 1, j = middle + 1;
+            while (i >= left) {
+                if (arr[i] == target) {
+                    list.add(i);
+                    i--;
+                } else {
+                    break;
+                }
+
+            }
+            while (j <= right) {
+                if (arr[j] == target) {
+                    list.add(j);
+                    j++;
+                } else {
+                    break;
+                }
+            }
+            return list;
+        } else if (arr[middle] > target) {
+            return binarySearchByRecursionAll(left, middle - 1, target, arr, list);
+        } else {
+            return binarySearchByRecursionAll(middle + 1, right, target, arr, list);
+        }
+    }
+
+    public static int binarySearchByRecursion(int left, int right, int target, int[] arr) {
+        if (left > right) {
+            return -1;
+        }
+        int middle = (left + right) / 2;
+        if (arr[middle] == target) {
+            return middle;
+        } else if (arr[middle] > target) {
+            return binarySearchByRecursion(left, middle - 1, target, arr);
+        } else {
+            return binarySearchByRecursion(middle + 1, right, target, arr);
+        }
+
+    }
+
+
 }

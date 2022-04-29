@@ -2,6 +2,7 @@ package algorithm.recursion;
 
 /**
  * @author 刘佳俊
+ * 迷宫问题
  */
 public class Maze {
     public static void main(String[] args) {

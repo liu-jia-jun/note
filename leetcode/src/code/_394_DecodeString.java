@@ -4,10 +4,11 @@ import java.util.Stack;
 
 /**
  * @author 刘佳俊
+ * 394. 字符串解码
  */
-public class A {
+public class _394_DecodeString {
     public static void main(String[] args) {
-        System.out.println(decodeString("100[leetcode]"));
+        System.out.println(decodeString("2[leetcode]"));
     }
 
     public static String decodeString(String s) {
@@ -17,17 +18,17 @@ public class A {
         boolean flag = false;
         String operTemp = "";
         Integer numberTemp;
-        String str="";
+        String str = "";
         for (int i = 0; i < chars.length; i++) {
             if ('0' <= chars[i] && chars[i] <= '9') {
                 if (flag) {
-                    numberStack.push(numberStack.pop()*10 + (chars[i] - 48));
+                    numberStack.push(numberStack.pop() * 10 + (chars[i] - 48));
                 } else {
                     numberStack.push(chars[i] - 48);
-                    flag=true;
+                    flag = true;
                 }
             } else if (chars[i] == ']') {
-                operTemp="";
+                operTemp = "";
 
                 while (!"[".equals(operatorStack.peek())) {
                     operTemp = (operatorStack.peek() != null ? operatorStack.pop() : "") + operTemp;
@@ -41,16 +42,16 @@ public class A {
                     str += operTemp;
                 }
                 operatorStack.push(str);
-                flag=false;
+                flag = false;
 
             } else {
                 operatorStack.add("" + chars[i]);
                 flag = false;
             }
         }
-        operTemp="";
+        operTemp = "";
         for (String s1 : operatorStack) {
-            operTemp+=s1;
+            operTemp += s1;
         }
 
         return operTemp;
