@@ -31,24 +31,56 @@ public class _94_InorderTraversal {
     }
 
     // 非递归写法
+
+    /**
+     * 记住左链如栈
+     *
+     * @param root
+     * @return
+     */
     public List<Integer> inorderTraversal2(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
-        TreeNode temp = root;
-        stack.add(temp);
+        while (root != null) {
+            stack.push(root);
+            root = root.left;
+        }
         while (!stack.isEmpty()) {
-            while (temp.left != null) {
-                temp = temp.left;
-                stack.add(temp);
-
-            }
             TreeNode node = stack.pop();
             list.add(node.val);
-
-            temp = temp.right;
+            // 这里的是输出节点的右子树,对右子树进行相同的操作
+            node = node.right;
+            while (node != null) {
+                stack.push(node);
+                node = node.left;
+            }
         }
+        return list;
+    }
+
+    /**
+     * 记住左链如栈
+     * 合并版
+     *
+     * @param root
+     * @return
+     */
+    public List<Integer> inorderTraversal3(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+
+        while (root != null || !stack.isEmpty()) {
+            while (root != null) {
+                stack.push(root);
+                root = root.left;
+            }
+            root = stack.pop();
+            list.add(root.val);
+            // 这里的是输出节点的右子树,对右子树进行相同的操作
+            root = root.right;
 
 
+        }
         return list;
     }
 }

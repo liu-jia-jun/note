@@ -4,73 +4,75 @@ package code;
  * @author 刘佳俊
  */
 public class _0_ {
-    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
+    public static void main(String[] args) {
+        System.out.println(divide2(-2147483648,
+                -1));
+    }
 
-        double result = 0;
-        int i = nums1.length;
-        int j = nums2.length;
-
-        if (i == 0 && j == 0) {
-            return result;
+    // 因为将 -2147483648 转成正数会越界，但是将 2147483647 转成负数，则不会
+// 所以，我们将 a 和 b 都转成负数
+// 时间复杂度：O(n)，n 是最大值 2147483647 --> 10^10 --> 超时
+    public static int divide2(int a, int b) {
+        // 32 位最大值：2^31 - 1 = 2147483647
+        // 32 位最小值：-2^31 = -2147483648
+        // -2147483648 / (-1) = 2147483648 > 2147483647 越界了
+        if (a == Integer.MIN_VALUE && b == -1) {
+            return Integer.MAX_VALUE;
         }
-        if (i == 0) {
-            if (j % 2 == 0) {
-                return nums2[j / 2];
+        int sign = (a > 0) ^ (b > 0) ? -1 : 1;
+        // 环境只支持存储 32 位整数
+        if (a > 0) {
+            a = -a;
+        }
+        if (b > 0) {
+            b = -b;
+        }
+        int res = 0;
+        while (a <= b) {
+            a -= b;
+            res++;
+        }
+        // bug 修复：因为不能使用乘号，所以将乘号换成三目运算符
+        return sign == 1 ? res : -res;
+    }
+
+    public static int divide(int a, int b) {
+        if (a == 0) {
+            return 0;
+        }
+
+        if (b == 1) {
+            if (a == Integer.MIN_VALUE) {
+                return Integer.MIN_VALUE;
             } else {
-                return (nums2[j / 2] + nums2[(j / 2) - 1]) / 2.0;
+                return a;
             }
         }
-        if (j == 0) {
-            if (i % 2 == 0) {
-                return nums2[i / 2];
+        if (b == -1) {
+            if (a == Integer.MIN_VALUE) {
+                return Integer.MAX_VALUE;
             } else {
-                return (nums2[i / 2] + nums2[(i / 2) - 1]) / 2.0;
+                return -a;
             }
         }
 
-
-        int amount = (i + j) / 2;
-
-        i = 0;
-        j = 0;
-
-
-        for (int n = 0; n < amount; n++) {
-            if(i<nums1.length&&j< nums2.length){
-                if(nums1[i]<nums2[j]){
-                    i++;
-                }else{
-                    j++;
-                }
-            }
-
-            if(i>=nums1.length&&j< nums2.length){
-                j++;
-            }
-            if(i<nums1.length&&j>= nums2.length){
-                i++;
-            }
-
+        int i = a > 0 ? -a : a;
+        int j = b > 0 ? -b : b;
+        int count = 0;
+        while (i <= j) {
+            i = i - j;
+            count--;
         }
-
-        if(amount%2==0){
-
-        }else{
-            if (i>=nums1.length){
-                return nums2[j];
+        if (count == Integer.MIN_VALUE) {
+            if (a > 0 && b > 0 || a < 0 && b < 0) {
+                count = -(count + 1);
             }
-            if(j>=nums1.length){
-                return nums1[i];
+        } else {
+            if (a > 0 && b > 0 || a < 0 && b < 0) {
+                count = -count;
             }
-
-            if(i>j){
-                return nums1[i];
-            }else{
-                return nums2[j];
-            }
-
         }
-
+        return count;
     }
 }
