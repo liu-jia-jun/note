@@ -15,9 +15,7 @@ public class _145_PostorderTraversal {
         Stack<TreeNode> stack = new Stack<>();
         TreeNode pre = null;
 
-        while(true){
 
-        }
 
 
 

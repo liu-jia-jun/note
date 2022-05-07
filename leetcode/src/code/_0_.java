@@ -6,8 +6,19 @@ package code;
 public class _0_ {
 
     public static void main(String[] args) {
-        System.out.println(divide2(-2147483648,
-                -1));
+        System.out.println(hammingWeight(-1));
+    }
+
+    public static int hammingWeight(int n) {
+
+
+        int count = 0;
+        for (int i = 0; i < 32; i++) {
+            count += (n & (1 << i)) == 0 ? 0 : 1;
+        }
+
+        return count;
+
     }
 
     // 因为将 -2147483648 转成正数会越界，但是将 2147483647 转成负数，则不会
