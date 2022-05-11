@@ -1,5 +1,7 @@
 package lesson.primary;
 
+import util.MyArray;
+
 import java.util.Arrays;
 
 /**
@@ -9,7 +11,7 @@ import java.util.Arrays;
  */
 public class BubbleSort {
     public static void main(String[] args) {
-        int[] arr = {1,8,5,1,6,7,3,4,6};
+        int[] arr = MyArray.getUnorderedArray(20);
 
         int[] ints = bubbleSort(arr);
         System.out.println(Arrays.toString(ints));

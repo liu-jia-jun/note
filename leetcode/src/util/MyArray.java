@@ -1,4 +1,4 @@
-package algorithm.util;
+package util;
 
 /**
  * @author 刘佳俊

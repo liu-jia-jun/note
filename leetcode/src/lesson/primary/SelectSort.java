@@ -1,6 +1,7 @@
 package lesson.primary;
 
 import com.sun.deploy.util.ArrayUtil;
+import util.MyArray;
 
 import java.util.Arrays;
 
@@ -15,7 +16,7 @@ public class SelectSort {
     public static void main(String[] args) {
 
 
-        int[] arr = {1,8,5,1,6,7,3,4,6};
+        int[] arr = MyArray.getUnorderedArray(20);
 
         int[] ints = selectSort(arr);
         System.out.println(Arrays.toString(ints));
