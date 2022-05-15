@@ -1,5 +1,7 @@
 package code;
 
+import java.math.BigInteger;
+
 /**
  * @author 刘佳俊
  *
@@ -13,6 +15,10 @@ package code;
 
 
 public class _21_mergeTwoLists {
+
+    public static void main(String[] args) {
+     long number = 4000000006L;
+    }
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode list = new ListNode();
         ListNode temp = list;
