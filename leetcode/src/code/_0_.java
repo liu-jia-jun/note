@@ -6,7 +6,7 @@ package code;
 public class _0_ {
 
     public static void main(String[] args) {
-        System.out.println(hammingWeight(-1));
+
     }
 
     public static int hammingWeight(int n) {

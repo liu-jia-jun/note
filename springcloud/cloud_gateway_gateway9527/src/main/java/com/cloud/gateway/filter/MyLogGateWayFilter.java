@@ -13,7 +13,7 @@ import java.util.Date;
 /**
  * @author 刘佳俊
  */
-@Component //必须加，必须加，必须加
+//@Component //必须加，必须加，必须加
 public class MyLogGateWayFilter implements GlobalFilter, Ordered {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
