@@ -39,6 +39,7 @@ public class _50_Pow {
     }
 
 
+
     public static double myPow2(double x, int n) {
         if (n == 0) {
             return 1;
