@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
-import java.util.concurrent.ArrayBlockingQueue;
+
 
 /**
  * @author 刘佳俊
+ *
+ * 二叉树的层序遍历
  */
 public class _102_LevelOrder {
     public List<List<Integer>> levelOrder(TreeNode root) {
