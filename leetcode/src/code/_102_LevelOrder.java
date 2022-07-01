@@ -9,7 +9,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 /**
  * @author 刘佳俊
  */
-public class _102_ {
+public class _102_LevelOrder {
     public List<List<Integer>> levelOrder(TreeNode root) {
 
         List<List<Integer>> list = new ArrayList<>();
