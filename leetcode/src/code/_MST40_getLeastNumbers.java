@@ -7,7 +7,7 @@ import java.util.*;
  * <p>
  * 最小的k个数
  */
-public class _MST40_ {
+public class _MST40_getLeastNumbers {
 
     // 直接通过数组工具类对arr[] 进行排序,之后返回前k个数字
     public int[] getLeastNumbers1(int[] arr, int k) {
