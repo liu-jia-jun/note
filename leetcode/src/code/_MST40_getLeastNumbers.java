@@ -6,6 +6,14 @@ import java.util.*;
  * @author 刘佳俊
  * <p>
  * 最小的k个数
+ *
+ *
+ * 思路:
+ *      1. 这种返回数组中前第k个最大或者最小的数都是典型的  dk问题
+ *
+ *      2. 我们可以使用快速排序中的思想使用快速选择的方式来写,无论如何都是可以在数组中找到第k大或者第k小的数,然后返回左边全部或者右边全部
+ *
+ *      3. 我们可以使用优先队列来写,通过构建元素个数为k的大根堆或者是小根堆来实现(这里要注意需要懂堆排序的实现)
  */
 public class _MST40_getLeastNumbers {
 
@@ -57,62 +65,52 @@ public class _MST40_getLeastNumbers {
     }
 
 
-
-
-
-
-
     // 通过快速排序思想来解决,大的放右边,小的放左边
-    public int[] getLeastNumbers(int[] arr, int k) {
-        randomizedSelected(arr, 0, arr.length - 1, k);
-        int[] vec = new int[k];
+    public int[] getLeastNumbers3(int[] arr, int k) {
+        poccess(arr, 0, arr.length - 1, k);
+        int[] result = new int[k];
         for (int i = 0; i < k; ++i) {
-            vec[i] = arr[i];
+            result[i] = arr[i];
         }
-        return vec;
+        return result;
     }
 
-    private void randomizedSelected(int[] arr, int l, int r, int k) {
-        if (l >= r) {
+    private void poccess(int[] arr, int left, int right, int k) {
+
+        if (left > right) {
             return;
         }
-        int pos = randomizedPartition(arr, l, r);
-        int num = pos - l + 1;
-        if (k == num) {
-            return;
-        } else if (k < num) {
-            randomizedSelected(arr, l, pos - 1, k);
-        } else {
-            randomizedSelected(arr, pos + 1, r, k - num);
-        }
-    }
+        int l = left;
+        int r = right;
+        int temp = arr[left];
 
-    // 基于随机的划分
-    private int randomizedPartition(int[] nums, int l, int r) {
-        int i = new Random().nextInt(r - l + 1) + l;
-        swap(nums, r, i);
-        return partition(nums, l, r);
-    }
-
-    private int partition(int[] nums, int l, int r) {
-        int pivot = nums[r];
-        int i = l - 1;
-        for (int j = l; j <= r - 1; ++j) {
-            if (nums[j] <= pivot) {
-                i = i + 1;
-                swap(nums, i, j);
+        while (l < r) {
+            while (l < r && arr[r] >= temp) {
+                r--;
             }
+            while (l < r && arr[l] <= temp) {
+                l++;
+            }
+
+            if (l < r) {
+                exchange(arr, l, r);
+            }
+
         }
-        swap(nums, i + 1, r);
-        return i + 1;
-    }
+        exchange(arr, left, l);
 
-    private void swap(int[] nums, int i, int j) {
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
+        if (k > l) {
+            poccess(arr, l + 1, right, k);
+        }
+        if (k < l) {
+            poccess(arr, left, r - 1, k);
+        }
     }
-
+    private void exchange(int[] arr, int L, int R) {
+        int temp = arr[L];
+        arr[L] = arr[R];
+        arr[R] = temp;
+    }
 
 
 }

@@ -78,7 +78,7 @@ public class _215_FindKthLargest {
         // 因为我们这个process方法所做的事情就是找到第k小的数
         process(nums, 0, nums.length - 1, nums.length - k);
 
-        System.out.println(Arrays.toString(nums));
+
         return nums[nums.length - k];
 
     }
@@ -91,6 +91,19 @@ public class _215_FindKthLargest {
         int l = left;
         int r = right;
 
+
+        /**
+         * 建议每个快速排序都加入随机选择
+         *
+         *
+         * 这里我们本可以直接选择最左边的数作为temp,但是我们这里用来随机选取,是因为这样性能更高
+         *
+         * 做法:
+         *      在left和right范围内随机选择一个数和nums[left]做一个值交换
+         *      之后我们继续以nums[left] 作为temp,进行比较,此时我们所用的就是我们随机选择出来的
+         *      这个比我们直接将nums[left]作为temp更加高效
+         *
+         */
         int tempIndex = randomIndex(left, right);
         exchange(nums, tempIndex, left);
 
