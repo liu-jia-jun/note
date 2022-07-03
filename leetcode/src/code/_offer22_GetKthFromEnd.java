@@ -2,6 +2,11 @@ package code;
 
 /**
  * @author 刘佳俊
+ *
+ * 链表中倒数第k个节点
+ *
+ * 思路:
+ *      快慢指针法
  */
 public class _offer22_GetKthFromEnd {
     public ListNode getKthFromEnd(ListNode head, int k) {
@@ -18,8 +23,6 @@ public class _offer22_GetKthFromEnd {
         }
 
         return slow;
-
-
 
     }
 }

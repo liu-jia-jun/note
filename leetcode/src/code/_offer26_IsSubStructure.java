@@ -7,6 +7,10 @@ package code;
  *
  * 思路:
  *      1. 递归调用,回溯算法
+ *      2. 先以一个节点为头节点判断B树是否为当前头节点树的子结构
+ *      3. 如果是则返回true
+ *      4. 如果不是则依次递归调用左节点和右节点作为头节点进行判断
+ *
  */
 public class _offer26_IsSubStructure {
     public boolean isSubStructure(TreeNode A, TreeNode B) {

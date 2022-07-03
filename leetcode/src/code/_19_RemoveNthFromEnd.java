@@ -2,6 +2,12 @@ package code;
 
 /**
  * @author 刘佳俊
+ *
+ *  删除链表的倒数第 N 个结点
+ *
+ *  思路:
+ *      快慢指针法
+ *
  */
 public class _19_RemoveNthFromEnd {
     public ListNode removeNthFromEnd(ListNode head, int n) {
