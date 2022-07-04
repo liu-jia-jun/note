@@ -75,4 +75,3 @@ public class _572_IsSubtree {
         return poccess(root.left, subRoot.left) && poccess(root.right, subRoot.right);
     }
 }
-Exclude

@@ -43,27 +43,27 @@ public class _6_ZigZagConversion {
 
         int len = s.length();
         int k;
-        if(len==0){
+        if (len == 0) {
             return "";
         }
-        if(numRows==1){
+        if (numRows == 1) {
             return s;
         }
         for (int i = 0; i < len; i++) {
-            k = i==0?0:i % (2 * numRows - 2);
+            k = i == 0 ? 0 : i % (2 * numRows - 2);
 
             if (k <= numRows - 1) {
-                strs[k] =  strs[k]==null? "":strs[k];
+                strs[k] = strs[k] == null ? "" : strs[k];
                 strs[k] += s.charAt(i);
 
             } else {// 这里判断该元素属于2n-2-k 行
-                strs[2 * numRows - 2 - k] =  strs[2 * numRows - 2 - k]==null? "":strs[2 * numRows - 2 - k];
+                strs[2 * numRows - 2 - k] = strs[2 * numRows - 2 - k] == null ? "" : strs[2 * numRows - 2 - k];
                 strs[2 * numRows - 2 - k] += s.charAt(i);
             }
         }
         String string = "";
         for (String str : strs) {
-            str = str==null?"":str;
+            str = str == null ? "" : str;
             string += str;
         }
         return string;
