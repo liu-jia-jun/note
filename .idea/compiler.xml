@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="test" />
         <module name="interview" />
+        <module name="java_io" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="design_mode" target="1.5" />
       <module name="interview" target="1.8" />
+      <module name="java_io" target="1.8" />
       <module name="test" target="8" />
     </bytecodeTargetLevel>
   </component>

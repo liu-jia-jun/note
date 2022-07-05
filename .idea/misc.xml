@@ -8,6 +8,8 @@
       <list>
         <option value="$PROJECT_DIR$/test/pom.xml" />
         <option value="$PROJECT_DIR$/interview/pom.xml" />
+        <option value="$PROJECT_DIR$/out/java_io/pom.xml" />
+        <option value="$PROJECT_DIR$/java_io/pom.xml" />
       </list>
     </option>
   </component>

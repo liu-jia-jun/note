@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/data_structure_algorithm/data_structure_algorithm.iml" filepath="$PROJECT_DIR$/data_structure_algorithm/data_structure_algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/design_mode/design_mode.iml" filepath="$PROJECT_DIR$/design_mode/design_mode.iml" />
       <module fileurl="file://$PROJECT_DIR$/interview/interview.iml" filepath="$PROJECT_DIR$/interview/interview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_io/java_io.iml" filepath="$PROJECT_DIR$/java_io/java_io.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode/leetcode.iml" filepath="$PROJECT_DIR$/leetcode/leetcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/note.iml" filepath="$PROJECT_DIR$/note.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
