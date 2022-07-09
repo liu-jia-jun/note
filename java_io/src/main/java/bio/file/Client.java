@@ -16,7 +16,7 @@ import java.net.Socket;
 public class Client {
     public static void main(String[] args) {
         try (InputStream is = new
-                FileInputStream("C:\\Users\\Lenovo\\Desktop\\1.jpg");) {
+                        FileInputStream("E:\\data\\手机文件\\图片\\01.jpg");) {
             //1.请求与服务端的Socket连接
             Socket socket = new Socket("127.0.0.1", 8888);
             //2.把字节输出流包装成一个数据输出流(DataOutputStream可以做分段数据发送)

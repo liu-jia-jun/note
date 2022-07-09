@@ -24,7 +24,7 @@ public class ServerReadThread extends Thread {
             System.out.println("服务端已经成功接收到了文件类型：" + suffix);
 //3.定义一个字节输出管道，负责把客户端发来的文件数据写出去
             OutputStream os = new
-                    FileOutputStream("C:\\Users\\Lenovo\\Desktop\\server\\"
+                    FileOutputStream("C:\\Users\\asus\\Desktop\\"
                     + UUID.randomUUID().toString() + suffix);
 //4.从数据输入流中读取文件数据，写出到字节输出流中去
             byte[] buffer = new byte[1024];
