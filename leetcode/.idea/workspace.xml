@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a2d5dca5-ed72-4e8e-8284-44eaddb486c4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../file.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_io_netty/src/main/java/nio/channel/A.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_io_netty/src/main/java/nio/channel/WriteFileByChannel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interview/target/classes/liu/interview/code/CommonTestBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interview/target/classes/liu/interview/code/ObjectPrint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interview/target/classes/shangguigu/first/Father.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interview/target/classes/shangguigu/first/Mydata.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interview/target/classes/shangguigu/first/_00_Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interview/target/classes/shangguigu/first/_01_I.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interview/target/classes/shangguigu/first/_02_Singleton1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interview/target/classes/shangguigu/first/_03_Singleton2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interview/target/classes/shangguigu/first/_04_Singleton3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interview/target/classes/shangguigu/first/_05_Singleton4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interview/target/classes/shangguigu/first/_06_Singleton5$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interview/target/classes/shangguigu/first/_06_Singleton5$Inner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interview/target/classes/shangguigu/first/_06_Singleton5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interview/target/classes/shangguigu/first/_07_Son.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interview/target/classes/shangguigu/first/_08_MethodParameters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interview/target/classes/shangguigu/first/_09_ClimbStairs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interview/target/classes/shangguigu/first/_10_Variables.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/bio、nio、aio.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/bio、nio、aio.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/java_io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/java_io_netty.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/src/main/java/bio/file/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/src/main/java/bio/file/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/src/main/java/bio/file/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/src/main/java/bio/file/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/src/main/java/bio/file/ServerReadThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/src/main/java/bio/file/ServerReadThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/src/main/java/bio/more/SocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/src/main/java/bio/more/SocketClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/src/main/java/bio/more/SocketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/src/main/java/bio/more/SocketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/src/main/java/bio/once/SocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/src/main/java/bio/once/SocketClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/src/main/java/bio/once/SocketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/src/main/java/bio/once/SocketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/src/main/java/bio/one_server_many_client/ServerThreadReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/src/main/java/bio/one_server_many_client/ServerThreadReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/src/main/java/bio/one_server_many_client/SocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/src/main/java/bio/one_server_many_client/SocketClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/src/main/java/bio/one_server_many_client/SocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/src/main/java/bio/one_server_many_client/SocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/src/main/java/bio/pseudo_asynchronous/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/src/main/java/bio/pseudo_asynchronous/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/src/main/java/bio/pseudo_asynchronous/HandlerSocketServerPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/src/main/java/bio/pseudo_asynchronous/HandlerSocketServerPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/src/main/java/bio/pseudo_asynchronous/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/src/main/java/bio/pseudo_asynchronous/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/src/main/java/bio/pseudo_asynchronous/ServerRunnableTarget.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/src/main/java/bio/pseudo_asynchronous/ServerRunnableTarget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/src/main/java/nio/buffer/BufferTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/src/main/java/nio/buffer/BufferTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/target/classes/bio/file/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/target/classes/bio/file/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/target/classes/bio/file/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/target/classes/bio/file/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/target/classes/bio/file/ServerReadThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/target/classes/bio/file/ServerReadThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/target/classes/bio/more/SocketClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/target/classes/bio/more/SocketClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/target/classes/bio/more/SocketService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/target/classes/bio/more/SocketService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/target/classes/bio/once/SocketClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/target/classes/bio/once/SocketClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/target/classes/bio/once/SocketService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/target/classes/bio/once/SocketService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/target/classes/bio/one_server_many_client/ServerThreadReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/target/classes/bio/one_server_many_client/ServerThreadReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/target/classes/bio/one_server_many_client/SocketClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/target/classes/bio/one_server_many_client/SocketServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/target/classes/bio/one_server_many_client/SocketServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/target/classes/bio/pseudo_asynchronous/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/target/classes/bio/pseudo_asynchronous/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/target/classes/bio/pseudo_asynchronous/HandlerSocketServerPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/target/classes/bio/pseudo_asynchronous/HandlerSocketServerPool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/target/classes/bio/pseudo_asynchronous/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/target/classes/bio/pseudo_asynchronous/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_io/target/classes/bio/pseudo_asynchronous/ServerRunnableTarget.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java_io_netty/target/classes/bio/pseudo_asynchronous/ServerRunnableTarget.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/_3_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/_3_LengthOfLongestSubstring.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../note.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../note.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/algorithm/algorithms/HanoiTower.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/algorithm/recursion/EightQueens.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/algorithm/recursion/Maze.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/algorithm/search/BinarySearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/algorithm/search/FibonacciSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/algorithm/search/InterpolationSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/algorithm/search/LinearSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/algorithm/sort/BubbleSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/algorithm/sort/HeapSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/algorithm/sort/InsertSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/algorithm/sort/MergeSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/algorithm/sort/QuickSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/algorithm/sort/RadixSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/algorithm/sort/SelectiontSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/algorithm/sort/ShellSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/algorithm/util/MyArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/array/SparseArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/graph/Graph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/hashtable/HashTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/hashtable/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/hashtable/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/link/BidirectionalLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/link/Boy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/link/BoyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/link/DoubleLink.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/link/JosephRing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/link/Link.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/link/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/link/SingleLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/link/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/link/WaysNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/queue/QueueByArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/queue/RingQueueByArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/queue/array.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/queue/ringArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/stack/ArrayStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/stack/Calculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/stack/ReversePolishCalculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/stack/SimpleCalculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/stack/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/tree/AVLNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/tree/AVLTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/tree/ArrBinaryTreeDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/tree/BinarySortNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/tree/BinarySortTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/tree/BinaryTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/tree/BinaryTreeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/tree/HuffmanCodeTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/tree/HuffmanNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/tree/HuffmanTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/tree/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/tree/ThreadeBinaryTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/data_structure_algorithm/data_structure/tree/ThreadeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_0_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_100_IsSameTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_101_IsSymmetric.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_102_LevelOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_107_LevelOrderBottom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_141_HasCycle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_142_DetectCycle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_144_InorderTraversal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_145_PostorderTraversal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_1480_RunningSum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_154_FindMin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_1609_IsEvenOddTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_160_GetIntersectionNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_191_HammingWeight.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_19_RemoveNthFromEnd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_1_TwoSum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_20_IsValid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_215_FindKthLargest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_215_FindKthLargest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_21_mergeTwoLists.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_222_CountNodes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_234_IsPalindrome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_24_SwapPairs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_25_RemoveDuplicates.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_25_ReverseKGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_27_RemoveElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_283_MoveZeroes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_2_AddTwoNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_35_SearchInsert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_394_DecodeString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_3_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_448_FindDisappearedNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_494_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_498_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_4_FindMedianSortedArrays.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_50_Pow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_521_FindLUSlength.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_572_IsSubtree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_69_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_6_ZigZagConversion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_701_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_704_Search.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_70_ClimbStairs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_796_RotateString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_7_ReverseInt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_83_DeleteDuplicates.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_88_Merge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_94_InorderTraversal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_98_$Info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_98_.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_9_IsPalindrome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_LCP06_MinCount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_MST02_02_kthToLast.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_MST17_14_SmallestK.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_MST40_getLeastNumbers$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_MST40_getLeastNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_offer03_FindRepeatNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_offer10_fib.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_offer11_MinArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_offer21_RemoveNthFromEnd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_offer22_GetKthFromEnd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_offer26_IsSubStructure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_offerII25_AddTwoNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/code/_offerII58_ReverseLeftWords.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/lesson/primary/BitOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/lesson/primary/BubbleSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/lesson/primary/InsertSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/lesson/primary/RandomMethod$RandomBox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/lesson/primary/RandomMethod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/lesson/primary/SelectSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/lesson/primary/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/util/MyArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/leetcode/util/NodeUtil.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2CF6KnRzLd2yvDvrsxqzhrqxFHu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a2d5dca5-ed72-4e8e-8284-44eaddb486c4" name="Changes" comment="" />
+      <created>1658385924179</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658385924179</updated>
+      <workItem from="1658385925448" duration="16000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
