@@ -8,6 +8,19 @@ package code;
  * 验证二叉搜索树
  */
 public class _98_ {
+
+
+
+
+
+
+
+
+
+
+
+
+
     public boolean isValidBST(TreeNode root) {
 
         Info info = process(root);
