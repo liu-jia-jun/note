@@ -1,0 +1,62 @@
+
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true #开启从注册中心动态创建路由的功能
+      routes:
+        - id: payment_routh #payment_route    #路由的ID，没有固定规则但要求唯一，建议配合服务名
+          # uri: http://localhost:8001          #匹配后提供服务的路由地址
+          uri: lb://cloud-payment-service #匹配后提供服务的路由地址
+          predicates:
+            - Path=/payment/**         # 断言，路径相匹配的进行路由
+        - id: payment_routh
+          uri: http://localhost:8001
+          predicates:
+            - Path=/test/**
+
+
+
+#          filters:
+#            - AddRequestParameter=X-Request-Id,1024 #过滤器工厂会在匹配的请求头加上一对请求头，名称为X-Request-Id值为1024
+#           这个是GateWay提供的过滤器，主要用自定义过滤器，有三十一种，详情请见：
+#  https://cloud.spring.io/spring-cloud-static/spring-cloud-gateway/2.2.1.RELEASE/reference/html/#the-addrequestparameter-gatewayfilter-factory
+
+        - id: payment_routh2 #payment_route    #路由的ID，没有固定规则但要求唯一，建议配合服务名
+          # uri: http://localhost:8001          #匹配后提供服务的路由地址
+          uri: lb://cloud-payment-service #匹配后提供服务的路由地址
+          predicates:
+            - Path=/payment/lb/**         # 断言，路径相匹配的进行路由
+#            - After=2020-02-05T15:10:03.685+08:00[Asia/Shanghai]         # 断言，路径相匹配的进行路由,after的值是一个时间格式，需要在这个时间点之后才能访问
+            #- Before=2020-02-05T15:10:03.685+08:00[Asia/Shanghai]         # 断言，路径相匹配的进行路由，before的值是一个时间格式，需要在这个时间点之前才能访问
+            #- Between=2020-02-02T17:45:06.206+08:00[Asia/Shanghai],2020-03-25T18:59:06.206+08:00[Asia/Shanghai]
+            #- Cookie=username,zzyy   # 请求必须要带有cookie 并且cookie中需要有username并且值为zzyy，注意这里的username的值可以是正则表达式
+            #- Header=X-Request-Id, \d+  # 请求头要有X-Request-Id属性并且值为整数的正则表达式
+            #- Host=**.atguigu.com
+#            - Method=GET
+#            - Query=username, \d+  # 要有参数名username并且值还要是整数才能路由
+
+
+  #id：我们自定义的路由 ID，保持唯一
+  ##uri：目标服务地址
+  ##predicates：路由条件，Predicate接受一个输入参数返回一个布尔值。
+  ##            该属性包含多种默认方法来将Predicate组合成其他复杂的逻辑(比如：与，或，非)
+
+
+
+eureka:
+  instance:
+    hostname: cloud-gateway-service
+  client: #服务提供者provider注册进eureka服务列表内
+    service-url:
+      register-with-eureka: true
+      fetch-registry: true
+      defaultZone: http://localhost:7001/eureka
+
+

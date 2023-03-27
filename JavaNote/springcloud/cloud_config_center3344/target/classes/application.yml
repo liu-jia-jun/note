@@ -1,0 +1,47 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name:  cloud-config-center #注册进Eureka服务器的微服务名
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/liu-jiajun12138/springcloud-config.git #GitHub上面的git仓库名字
+          ####搜索目录
+          search-paths:
+            - springcloud-config
+#     请注意：如果springcloud-config的服务端访问出现Auth fail，说明访问验证出错，拒绝访问，此时需要开启身份验证并输入用户名和密码进行验证
+          force-pull: true
+          username: liu-jiajun12138
+          password: 15279436128LIU
+      ####读取分支
+      label: main
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  #rabbitmq相关配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+
+##rabbitmq相关配置,暴露bus刷新配置的端点
+management:
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: 'bus-refresh'
+
+
+
+#服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+
